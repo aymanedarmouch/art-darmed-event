@@ -18,7 +18,7 @@
       DAR MED ART EVENT
     </div>
     <div class="loader-bar"><div class="loader-bar-fill"></div></div>
-    <p class="loader-tagline">Taste the Soul of Marrakech</p>
+    <p class="loader-tagline" data-i18n="loader.tagline">Taste the Soul of Marrakech</p>
   </div>
 </div>
 
@@ -29,13 +29,18 @@
     Dar Med Art
   </a>
   <div class="nav-links" id="navLinks">
-    <a href="#hero" class="active">Home</a>
-    <a href="#experience">Experience</a>
-    <a href="#ebooks">E-Books</a>
-    <a href="#menu">Menu</a>
-    <a href="#blog">Blog</a>
-    <a href="#about">About</a>
-    <a href="#hero" class="nav-cta" id="navBookBtn">Book Your Class</a>
+    <a href="#hero" class="active" data-i18n="nav.home">Home</a>
+    <a href="#experience" data-i18n="nav.experience">Experience</a>
+    <a href="#ebooks" data-i18n="nav.ebooks">E-Books</a>
+    <a href="#menu" data-i18n="nav.menu">Menu</a>
+    <a href="#blog" data-i18n="nav.blog">Blog</a>
+    <a href="#about" data-i18n="nav.about">About</a>
+    <a href="#hero" class="nav-cta" id="navBookBtn" data-i18n="nav.book">Book Your Class</a>
+  </div>
+  <!-- Language Toggle -->
+  <div class="lang-toggle" id="langToggle">
+    <button class="lang-btn active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="fr">FR</button>
   </div>
   <div class="nav-toggle" id="navToggle">
     <span></span><span></span><span></span>
@@ -54,41 +59,41 @@
   <div class="hero-content">
     <span class="hero-label" id="heroLabel">
       <span class="label-dot"></span>
-      Marrakech Medina · Cooking Classes
+      <span data-i18n="hero.label">Marrakech Medina · Cooking Classes</span>
     </span>
-    <h1 id="heroTitle">
+    <h1 id="heroTitle" data-i18n="hero.title">
       Taste the<br><span class="accent">Soul of Marrakech</span>
     </h1>
-    <p class="hero-text" id="heroText">
+    <p class="hero-text" id="heroText" data-i18n="hero.text">
       Immerse yourself in the flavours, aromas, and traditions of Moroccan cuisine. From the bustling souks to our centuries-old riad kitchen, every dish tells a story.
     </p>
     <div class="hero-buttons">
       <a href="#experience" class="btn btn-primary" id="heroBookBtn">
-        Book Your Class <span class="btn-icon">→</span>
+        <span data-i18n="hero.book">Book Your Class</span> <span class="btn-icon">→</span>
       </a>
       <a href="#menu" class="btn btn-outline-light">
-        Explore the Menu
+        <span data-i18n="hero.explore">Explore the Menu</span>
       </a>
     </div>
 
     <div class="hero-stats" id="heroStats">
       <div class="hero-stat">
         <div class="hero-stat-number" data-count="12">0</div>
-        <div class="hero-stat-label">Years of Tradition</div>
+        <div class="hero-stat-label" data-i18n="hero.stat1">Years of Tradition</div>
       </div>
       <div class="hero-stat">
         <div class="hero-stat-number" data-count="5000">0</div>
-        <div class="hero-stat-label">Guests Welcomed</div>
+        <div class="hero-stat-label" data-i18n="hero.stat2">Guests Welcomed</div>
       </div>
       <div class="hero-stat">
         <div class="hero-stat-number" data-count="30">0</div>
-        <div class="hero-stat-label">Signature Recipes</div>
+        <div class="hero-stat-label" data-i18n="hero.stat3">Signature Recipes</div>
       </div>
     </div>
   </div>
 
   <div class="scroll-indicator">
-    <span>Scroll</span>
+    <span data-i18n="hero.scroll">Scroll</span>
     <div class="scroll-line"></div>
   </div>
 </section>
@@ -97,9 +102,9 @@
 <section class="section" id="experience">
   <div class="container">
     <div class="section-header">
-      <span class="label" data-reveal>The Experience</span>
-      <h2 data-reveal>A Culinary Journey Through <span class="accent-font">Marrakech</span></h2>
-      <p class="lead" data-reveal>
+      <span class="label" data-reveal data-i18n="exp.label">The Experience</span>
+      <h2 data-reveal data-i18n="exp.title">A Culinary Journey Through <span class="accent-font">Marrakech</span></h2>
+      <p class="lead" data-reveal data-i18n="exp.lead">
         From the vibrant souks to your plate, every moment of the Dar Med Art cooking class is crafted to ignite your senses and connect you to Moroccan heritage.
       </p>
     </div>
@@ -112,8 +117,8 @@
           <span class="experience-step">01</span>
         </div>
         <div class="experience-card-body">
-          <h3>The Souk Tour</h3>
-          <p>Start your journey at the source. Walk through the bustling spice markets of the Medina, hand-picking saffron, cumin, and preserved lemons alongside our local guide.</p>
+          <h3 data-i18n="exp.card1.title">The Souk Tour</h3>
+          <p data-i18n="exp.card1.text">Start your journey at the source. Walk through the bustling spice markets of the Medina, hand-picking saffron, cumin, and preserved lemons alongside our local guide.</p>
         </div>
       </div>
 
@@ -124,8 +129,8 @@
           <span class="experience-step">02</span>
         </div>
         <div class="experience-card-body">
-          <h3>The Preparation</h3>
-          <p>Roll couscous by hand, master the art of the tagine, and learn family recipes passed down through generations — all inside our riad kitchen.</p>
+          <h3 data-i18n="exp.card2.title">The Preparation</h3>
+          <p data-i18n="exp.card2.text">Roll couscous by hand, master the art of the tagine, and learn family recipes passed down through generations — all inside our riad kitchen.</p>
         </div>
       </div>
 
@@ -136,8 +141,8 @@
           <span class="experience-step">03</span>
         </div>
         <div class="experience-card-body">
-          <h3>The Tasting</h3>
-          <p>Savor your creations in the shade of our courtyard, paired with fresh mint tea and traditional Moroccan pastries. The perfect ending to a perfect day.</p>
+          <h3 data-i18n="exp.card3.title">The Tasting</h3>
+          <p data-i18n="exp.card3.text">Savor your creations in the shade of our courtyard, paired with fresh mint tea and traditional Moroccan pastries. The perfect ending to a perfect day.</p>
         </div>
       </div>
     </div>
@@ -148,9 +153,9 @@
 <section class="section section-sand" id="ebooks">
   <div class="container">
     <div class="section-header">
-      <span class="label" data-reveal>Digital Library</span>
-      <h2 data-reveal>Take <span class="accent-font">Morocco</span> Home with You</h2>
-      <p class="lead" data-reveal>
+      <span class="label" data-reveal data-i18n="ebook.label">Digital Library</span>
+      <h2 data-reveal data-i18n="ebook.title">Take <span class="accent-font">Morocco</span> Home with You</h2>
+      <p class="lead" data-reveal data-i18n="ebook.lead">
         Our curated collection of premium cooking e-books brings the flavours of Marrakech to your kitchen, wherever you are in the world.
       </p>
     </div>
@@ -162,12 +167,12 @@
           <img src="images/ebook-tagine.png" alt="The Art of Tagine e-book" loading="lazy">
         </div>
         <div class="ebook-card-body">
-          <span class="ebook-badge">Bestseller</span>
-          <h3>The Art of Tagine</h3>
-          <p>32 authentic tagine recipes — from classic lamb with prunes to modern vegetable variations. Includes step-by-step photography.</p>
+          <span class="ebook-badge" data-i18n="ebook.badge.best">Bestseller</span>
+          <h3 data-i18n="ebook.1.title">The Art of Tagine</h3>
+          <p data-i18n="ebook.1.text">32 authentic tagine recipes — from classic lamb with prunes to modern vegetable variations. Includes step-by-step photography.</p>
           <div class="ebook-footer">
             <span class="ebook-price">€14.99</span>
-            <a href="#" class="btn btn-buy" id="buyTagine">Quick Buy</a>
+            <a href="#" class="btn btn-buy" id="buyTagine" data-i18n="ebook.buy">Quick Buy</a>
           </div>
         </div>
       </div>
@@ -178,12 +183,12 @@
           <img src="images/ebook-pastry.png" alt="Moroccan Pastry Secrets e-book" loading="lazy">
         </div>
         <div class="ebook-card-body">
-          <span class="ebook-badge ebook-badge-new">New</span>
-          <h3>Moroccan Pastry Secrets</h3>
-          <p>Master cornes de gazelle, chebakia, and briwat with our pastry chef's guide. Over 25 recipes with professional tips.</p>
+          <span class="ebook-badge ebook-badge-new" data-i18n="ebook.badge.new">New</span>
+          <h3 data-i18n="ebook.2.title">Moroccan Pastry Secrets</h3>
+          <p data-i18n="ebook.2.text">Master cornes de gazelle, chebakia, and briwat with our pastry chef's guide. Over 25 recipes with professional tips.</p>
           <div class="ebook-footer">
             <span class="ebook-price">€12.99</span>
-            <a href="#" class="btn btn-buy" id="buyPastry">Quick Buy</a>
+            <a href="#" class="btn btn-buy" id="buyPastry" data-i18n="ebook.buy">Quick Buy</a>
           </div>
         </div>
       </div>
@@ -194,12 +199,12 @@
           <img src="images/ebook-spices.png" alt="Spice Routes of Morocco e-book" loading="lazy">
         </div>
         <div class="ebook-card-body">
-          <span class="ebook-badge ebook-badge-popular">Popular</span>
-          <h3>Spice Routes of Morocco</h3>
-          <p>A deep dive into 40+ Moroccan spices — their origins, flavour profiles, and how to create the perfect ras el hanout blend at home.</p>
+          <span class="ebook-badge ebook-badge-popular" data-i18n="ebook.badge.popular">Popular</span>
+          <h3 data-i18n="ebook.3.title">Spice Routes of Morocco</h3>
+          <p data-i18n="ebook.3.text">A deep dive into 40+ Moroccan spices — their origins, flavour profiles, and how to create the perfect ras el hanout blend at home.</p>
           <div class="ebook-footer">
             <span class="ebook-price">€9.99</span>
-            <a href="#" class="btn btn-buy" id="buySpices">Quick Buy</a>
+            <a href="#" class="btn btn-buy" id="buySpices" data-i18n="ebook.buy">Quick Buy</a>
           </div>
         </div>
       </div>
@@ -212,9 +217,9 @@
   <div class="menu-bg-overlay"></div>
   <div class="container menu-container">
     <div class="section-header">
-      <span class="label" data-reveal>The Menu</span>
-      <h2 data-reveal>Seasonal <span class="accent-font">Tasting Menu</span></h2>
-      <p class="lead" data-reveal>
+      <span class="label" data-reveal data-i18n="menu.label">The Menu</span>
+      <h2 data-reveal data-i18n="menu.title">Seasonal <span class="accent-font">Tasting Menu</span></h2>
+      <p class="lead" data-reveal data-i18n="menu.lead">
         Each class features a curated selection of dishes that celebrate Morocco's seasonal ingredients and regional traditions.
       </p>
     </div>
@@ -224,7 +229,7 @@
       <div class="menu-category" id="menuStarters" data-reveal data-reveal-delay="0">
         <div class="menu-category-header">
           <span class="menu-cat-number">I</span>
-          <h3>Starters</h3>
+          <h3 data-i18n="menu.starters">Starters</h3>
           <div class="menu-divider"></div>
         </div>
         <div class="menu-items">
@@ -233,21 +238,21 @@
               <span class="menu-item-name">Harira Fassia</span>
               <span class="menu-item-dots"></span>
             </div>
-            <p class="menu-item-desc">Traditional tomato-lentil soup with saffron, ginger, and fresh herbs</p>
+            <p class="menu-item-desc" data-i18n="menu.harira.desc">Traditional tomato-lentil soup with saffron, ginger, and fresh herbs</p>
           </div>
           <div class="menu-item">
             <div class="menu-item-header">
               <span class="menu-item-name">Zaalouk</span>
               <span class="menu-item-dots"></span>
             </div>
-            <p class="menu-item-desc">Smoky aubergine and tomato salad with cumin, garlic, and olive oil</p>
+            <p class="menu-item-desc" data-i18n="menu.zaalouk.desc">Smoky aubergine and tomato salad with cumin, garlic, and olive oil</p>
           </div>
           <div class="menu-item">
             <div class="menu-item-header">
               <span class="menu-item-name">Briwat au Fromage</span>
               <span class="menu-item-dots"></span>
             </div>
-            <p class="menu-item-desc">Crispy phyllo triangles filled with herbed goat cheese and honey</p>
+            <p class="menu-item-desc" data-i18n="menu.briwat.desc">Crispy phyllo triangles filled with herbed goat cheese and honey</p>
           </div>
         </div>
       </div>
@@ -256,7 +261,7 @@
       <div class="menu-category" id="menuMains" data-reveal data-reveal-delay="0.15">
         <div class="menu-category-header">
           <span class="menu-cat-number">II</span>
-          <h3>Main Courses</h3>
+          <h3 data-i18n="menu.mains">Main Courses</h3>
           <div class="menu-divider"></div>
         </div>
         <div class="menu-items">
@@ -265,21 +270,21 @@
               <span class="menu-item-name">Tagine d'Agneau</span>
               <span class="menu-item-dots"></span>
             </div>
-            <p class="menu-item-desc">Slow-cooked lamb with caramelised prunes, toasted almonds, and cinnamon</p>
+            <p class="menu-item-desc" data-i18n="menu.tagine.desc">Slow-cooked lamb with caramelised prunes, toasted almonds, and cinnamon</p>
           </div>
           <div class="menu-item">
             <div class="menu-item-header">
               <span class="menu-item-name">Couscous Royal</span>
               <span class="menu-item-dots"></span>
             </div>
-            <p class="menu-item-desc">Hand-rolled semolina with seven-vegetable broth and merguez</p>
+            <p class="menu-item-desc" data-i18n="menu.couscous.desc">Hand-rolled semolina with seven-vegetable broth and merguez</p>
           </div>
           <div class="menu-item">
             <div class="menu-item-header">
               <span class="menu-item-name">Pastilla au Poulet</span>
               <span class="menu-item-dots"></span>
             </div>
-            <p class="menu-item-desc">Flaky pastry pie with spiced chicken, toasted almonds, and dusted sugar</p>
+            <p class="menu-item-desc" data-i18n="menu.pastilla.desc">Flaky pastry pie with spiced chicken, toasted almonds, and dusted sugar</p>
           </div>
         </div>
       </div>
@@ -288,7 +293,7 @@
       <div class="menu-category" id="menuDesserts" data-reveal data-reveal-delay="0.3">
         <div class="menu-category-header">
           <span class="menu-cat-number">III</span>
-          <h3>Desserts & Tea</h3>
+          <h3 data-i18n="menu.desserts">Desserts & Tea</h3>
           <div class="menu-divider"></div>
         </div>
         <div class="menu-items">
@@ -297,21 +302,21 @@
               <span class="menu-item-name">Cornes de Gazelle</span>
               <span class="menu-item-dots"></span>
             </div>
-            <p class="menu-item-desc">Crescent-shaped almond paste pastries scented with orange blossom</p>
+            <p class="menu-item-desc" data-i18n="menu.cornes.desc">Crescent-shaped almond paste pastries scented with orange blossom</p>
           </div>
           <div class="menu-item">
             <div class="menu-item-header">
               <span class="menu-item-name">Chebakia au Miel</span>
               <span class="menu-item-dots"></span>
             </div>
-            <p class="menu-item-desc">Flower-shaped sesame cookies glazed in warm honey and rosewater</p>
+            <p class="menu-item-desc" data-i18n="menu.chebakia.desc">Flower-shaped sesame cookies glazed in warm honey and rosewater</p>
           </div>
           <div class="menu-item">
             <div class="menu-item-header">
               <span class="menu-item-name">Thé à la Menthe</span>
               <span class="menu-item-dots"></span>
             </div>
-            <p class="menu-item-desc">Ceremonial Moroccan mint tea poured from height — the taste of hospitality</p>
+            <p class="menu-item-desc" data-i18n="menu.tea.desc">Ceremonial Moroccan mint tea poured from height — the taste of hospitality</p>
           </div>
         </div>
       </div>
@@ -325,9 +330,9 @@
 
     <!-- Section Header -->
     <div class="section-header gravity-header" data-reveal>
-      <span class="label">The Journal</span>
-      <h2>The Culinary <span class="accent-font">Gravity</span></h2>
-      <p class="lead">Stories that float between tradition and innovation — where Moroccan heritage meets modern culinary thought.</p>
+      <span class="label" data-i18n="blog.label">The Journal</span>
+      <h2 data-i18n="blog.title">The Culinary <span class="accent-font">Gravity</span></h2>
+      <p class="lead" data-i18n="blog.lead">Stories that float between tradition and innovation — where Moroccan heritage meets modern culinary thought.</p>
       <!-- Decorative architectural lines -->
       <div class="gravity-lines">
         <span></span><span></span><span></span>
@@ -356,12 +361,12 @@
           <!-- Text Content -->
           <div class="gravity-post-content">
             <div class="gravity-post-meta">
-              <span class="gravity-tag">Culinary Design</span>
+              <span class="gravity-tag" data-i18n="blog.tag1">Culinary Design</span>
               <time datetime="2026-03-20">March 20, 2026</time>
             </div>
-            <h2 class="gravity-post-title">Marrakech Culinary Design: Where Spice Meets Space</h2>
-            <p class="gravity-post-excerpt">How the ancient spice markets of the Medina are inspiring a new wave of culinary architecture — where flavour profiles are designed like floor plans.</p>
-            <a href="blog-culinary-design.html" class="btn btn-glow" id="blogRead1">Read the Story <span class="btn-icon">→</span></a>
+            <h2 class="gravity-post-title" data-i18n="blog.post1.title">Marrakech Culinary Design: Where Spice Meets Space</h2>
+            <p class="gravity-post-excerpt" data-i18n="blog.post1.excerpt">How the ancient spice markets of the Medina are inspiring a new wave of culinary architecture — where flavour profiles are designed like floor plans.</p>
+            <a href="blog-culinary-design.html" class="btn btn-glow" id="blogRead1"><span data-i18n="blog.read">Read the Story</span> <span class="btn-icon">→</span></a>
           </div>
         </div>
         <!-- Timeline node -->
@@ -383,12 +388,12 @@
           <!-- Text Content -->
           <div class="gravity-post-content">
             <div class="gravity-post-meta">
-              <span class="gravity-tag">Tradition</span>
+              <span class="gravity-tag" data-i18n="blog.tag2">Tradition</span>
               <time datetime="2026-03-15">March 15, 2026</time>
             </div>
-            <h2 class="gravity-post-title">The Art of the Tajine: A Vessel Between Worlds</h2>
-            <p class="gravity-post-excerpt">The conical lid isn't just design — it's physics. Explore how the tajine's ancient geometry creates a closed-loop flavour system that modern chefs can't replicate.</p>
-            <a href="blog-art-of-tajine.html" class="btn btn-glow" id="blogRead2">Read the Story <span class="btn-icon">→</span></a>
+            <h2 class="gravity-post-title" data-i18n="blog.post2.title">The Art of the Tajine: A Vessel Between Worlds</h2>
+            <p class="gravity-post-excerpt" data-i18n="blog.post2.excerpt">The conical lid isn't just design — it's physics. Explore how the tajine's ancient geometry creates a closed-loop flavour system that modern chefs can't replicate.</p>
+            <a href="blog-art-of-tajine.html" class="btn btn-glow" id="blogRead2"><span data-i18n="blog.read">Read the Story</span> <span class="btn-icon">→</span></a>
           </div>
         </div>
         <div class="timeline-node"><span>02</span></div>
@@ -410,12 +415,12 @@
           <!-- Text Content -->
           <div class="gravity-post-content">
             <div class="gravity-post-meta">
-              <span class="gravity-tag">Modern Fusion</span>
+              <span class="gravity-tag" data-i18n="blog.tag3">Modern Fusion</span>
               <time datetime="2026-03-08">March 8, 2026</time>
             </div>
-            <h2 class="gravity-post-title">Modern Moroccan Recipes: Deconstructing the Medina on a Plate</h2>
-            <p class="gravity-post-excerpt">A new generation of chefs is suspended between reverence and rebellion — breaking apart centuries-old recipes and reassembling them in weightless new forms.</p>
-            <a href="blog-modern-recipes.html" class="btn btn-glow" id="blogRead3">Read the Story <span class="btn-icon">→</span></a>
+            <h2 class="gravity-post-title" data-i18n="blog.post3.title">Modern Moroccan Recipes: Deconstructing the Medina on a Plate</h2>
+            <p class="gravity-post-excerpt" data-i18n="blog.post3.excerpt">A new generation of chefs is suspended between reverence and rebellion — breaking apart centuries-old recipes and reassembling them in weightless new forms.</p>
+            <a href="blog-modern-recipes.html" class="btn btn-glow" id="blogRead3"><span data-i18n="blog.read">Read the Story</span> <span class="btn-icon">→</span></a>
           </div>
         </div>
         <div class="timeline-node"><span>03</span></div>
@@ -433,10 +438,10 @@
                loading="lazy">
         </div>
         <div class="gravity-ebook-text">
-          <span class="label">New Collection</span>
-          <h2>Anti-Gravity <span class="accent-font">Culinary E-Books</span></h2>
-          <p>Our weightless recipe collections let you cook Moroccan dishes that transcend the ordinary. Beautifully designed, endlessly inspiring.</p>
-          <a href="#ebooks" class="btn btn-glow-lg" id="gravityEbookCta">Explore the Collection <span class="btn-icon">→</span></a>
+          <span class="label" data-i18n="blog.cta.label">New Collection</span>
+          <h2 data-i18n="blog.cta.title">Anti-Gravity <span class="accent-font">Culinary E-Books</span></h2>
+          <p data-i18n="blog.cta.text">Our weightless recipe collections let you cook Moroccan dishes that transcend the ordinary. Beautifully designed, endlessly inspiring.</p>
+          <a href="#ebooks" class="btn btn-glow-lg" id="gravityEbookCta"><span data-i18n="blog.cta.btn">Explore the Collection</span> <span class="btn-icon">→</span></a>
         </div>
       </div>
     </div>
@@ -452,45 +457,45 @@
         <img src="images/about-dar.png" alt="Dar Med Art riad courtyard with fountain and orange trees" loading="lazy">
         <div class="about-image-badge">
           <strong>Est. 2014</strong>
-          <span>Marrakech Medina</span>
+          <span data-i18n="about.badge">Marrakech Medina</span>
         </div>
       </div>
       <div class="about-text">
-        <span class="label" data-reveal>Our Story</span>
-        <h2 data-reveal>Welcome to the <span class="accent-font">Dar</span></h2>
-        <p data-reveal>
+        <span class="label" data-reveal data-i18n="about.label">Our Story</span>
+        <h2 data-reveal data-i18n="about.title">Welcome to the <span class="accent-font">Dar</span></h2>
+        <p data-reveal data-i18n="about.p1">
           In the heart of the ancient Medina, behind a hand-carved cedarwood door, lies Dar Med Art — a traditional riad that has been our family home for generations. Every tile, every arch, every courtyard fountain carries the memory of countless meals shared and stories told.
         </p>
-        <p data-reveal>
+        <p data-reveal data-i18n="about.p2">
           We opened our kitchen to the world because we believe food is the most honest expression of culture. When you cook with us, you're not just learning recipes — you're becoming part of a living tradition that stretches back centuries.
         </p>
         <div class="about-features" data-reveal>
           <div class="about-feature">
             <div class="about-feature-icon">🏠</div>
             <div>
-              <strong>Historic Riad</strong>
-              <span>Centuries-old traditional house in the Medina</span>
+              <strong data-i18n="about.feat1.title">Historic Riad</strong>
+              <span data-i18n="about.feat1.text">Centuries-old traditional house in the Medina</span>
             </div>
           </div>
           <div class="about-feature">
             <div class="about-feature-icon">👨‍🍳</div>
             <div>
-              <strong>Local Chefs</strong>
-              <span>Family recipes passed down through generations</span>
+              <strong data-i18n="about.feat2.title">Local Chefs</strong>
+              <span data-i18n="about.feat2.text">Family recipes passed down through generations</span>
             </div>
           </div>
           <div class="about-feature">
             <div class="about-feature-icon">🌿</div>
             <div>
-              <strong>Fresh Ingredients</strong>
-              <span>Sourced daily from the Medina's local markets</span>
+              <strong data-i18n="about.feat3.title">Fresh Ingredients</strong>
+              <span data-i18n="about.feat3.text">Sourced daily from the Medina's local markets</span>
             </div>
           </div>
           <div class="about-feature">
             <div class="about-feature-icon">❤️</div>
             <div>
-              <strong>Small Groups</strong>
-              <span>Intimate classes of max 8 guests for personal attention</span>
+              <strong data-i18n="about.feat4.title">Small Groups</strong>
+              <span data-i18n="about.feat4.text">Intimate classes of max 8 guests for personal attention</span>
             </div>
           </div>
         </div>
@@ -504,11 +509,11 @@
   <div class="container">
     <div class="cta-banner" id="ctaBanner" data-reveal>
       <div class="cta-pattern"></div>
-      <span class="label">Ready for an unforgettable experience?</span>
-      <h2>Reserve Your <span class="accent-font">Cooking Class</span></h2>
-      <p>Join us in the Medina for a morning of flavours, stories, and the warmest Moroccan hospitality. Classes available daily.</p>
+      <span class="label" data-i18n="cta.label">Ready for an unforgettable experience?</span>
+      <h2 data-i18n="cta.title">Reserve Your <span class="accent-font">Cooking Class</span></h2>
+      <p data-i18n="cta.text">Join us in the Medina for a morning of flavours, stories, and the warmest Moroccan hospitality. Classes available daily.</p>
       <div class="cta-buttons">
-        <a href="#" class="btn btn-saffron" id="ctaBookBtn">Book Now <span class="btn-icon">→</span></a>
+        <a href="#" class="btn btn-saffron" id="ctaBookBtn"><span data-i18n="cta.book">Book Now</span> <span class="btn-icon">→</span></a>
         <a href="mailto:hello@darmedart.com" class="btn btn-white">hello@darmedart.com</a>
       </div>
     </div>
@@ -524,20 +529,20 @@
           <span class="logo-icon">✦</span>
           Dar Med Art
         </a>
-        <p>Moroccan cooking classes in the heart of the Marrakech Medina. Discover the art of tagine, couscous, and pastry in our centuries-old riad.</p>
+        <p data-i18n="footer.desc">Moroccan cooking classes in the heart of the Marrakech Medina. Discover the art of tagine, couscous, and pastry in our centuries-old riad.</p>
       </div>
       <div>
-        <h4>Navigate</h4>
+        <h4 data-i18n="footer.nav">Navigate</h4>
         <div class="footer-links">
-          <a href="#hero">Home</a>
-          <a href="#experience">Experience</a>
-          <a href="#ebooks">E-Books</a>
-          <a href="#menu">Menu</a>
-          <a href="#about">About</a>
+          <a href="#hero" data-i18n="nav.home">Home</a>
+          <a href="#experience" data-i18n="nav.experience">Experience</a>
+          <a href="#ebooks" data-i18n="nav.ebooks">E-Books</a>
+          <a href="#menu" data-i18n="nav.menu">Menu</a>
+          <a href="#about" data-i18n="nav.about">About</a>
         </div>
       </div>
       <div>
-        <h4>Contact</h4>
+        <h4 data-i18n="footer.contact">Contact</h4>
         <div class="footer-links">
           <a href="mailto:hello@darmedart.com">hello@darmedart.com</a>
           <a href="tel:+212600000000">+212 600 000 000</a>
@@ -546,7 +551,7 @@
         </div>
       </div>
       <div class="footer-social-col">
-        <h4>Follow Us</h4>
+        <h4 data-i18n="footer.follow">Follow Us</h4>
         <div class="footer-socials">
           <a href="#" class="footer-social" aria-label="Instagram">𝕀𝔾</a>
           <a href="#" class="footer-social" aria-label="Facebook">𝔽𝔹</a>
@@ -555,10 +560,10 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Dar Med Art Event. All rights reserved.</span>
+      <span data-i18n="footer.copy">© 2026 Dar Med Art Event. All rights reserved.</span>
       <div class="footer-bottom-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
+        <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+        <a href="#" data-i18n="footer.terms">Terms of Service</a>
       </div>
     </div>
   </div>
@@ -567,6 +572,7 @@
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="translations.js"></script>
 <script src="main.js"></script>
 </body>
 </html>

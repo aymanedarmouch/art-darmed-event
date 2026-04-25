@@ -1186,3 +1186,70 @@ h4 { font-size:1.15rem; font-family:var(--font-body); font-weight:600 }
   .gravity-post-title { font-size: 1.3rem }
   .gravity-ebook-cta-inner { padding: var(--space-lg) var(--space-md) }
 }
+
+/* =============================================
+   LANGUAGE TOGGLE
+   ============================================= */
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: var(--radius-full);
+  padding: 3px;
+  margin-left: var(--space-sm);
+  backdrop-filter: blur(8px);
+  transition: all var(--duration-med) var(--ease-out);
+}
+.nav.scrolled .lang-toggle {
+  background: rgba(0,0,0,.06);
+  border-color: rgba(0,0,0,.1);
+}
+
+.lang-btn {
+  padding: .35rem .75rem;
+  font-family: var(--font-body);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.55);
+  border-radius: var(--radius-full);
+  transition: all var(--duration-fast) var(--ease-spring);
+  cursor: pointer;
+  line-height: 1;
+}
+.nav.scrolled .lang-btn {
+  color: rgba(0,0,0,.4);
+}
+
+.lang-btn.active {
+  background: var(--saffron);
+  color: var(--charcoal);
+  box-shadow: 0 2px 8px rgba(233,161,6,.3);
+}
+.nav.scrolled .lang-btn.active {
+  background: var(--saffron);
+  color: var(--charcoal);
+}
+
+.lang-btn:not(.active):hover {
+  color: var(--white);
+  background: rgba(255,255,255,.1);
+}
+.nav.scrolled .lang-btn:not(.active):hover {
+  color: var(--charcoal);
+  background: rgba(0,0,0,.06);
+}
+
+/* Mobile language toggle */
+@media(max-width:900px) {
+  .lang-toggle {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
