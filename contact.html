@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Contact — Para-Végétal | Nous Contacter à Marrakech</title>
+  <meta name="description" content="Contactez Para-Végétal pour vos projets de paysagisme, achat de plantes ou demande de devis. Pépinière à Marrakech, Route de l'Ourika.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+</head>
+<body>
+
+<div class="loader" id="loader"><div class="loader-inner"><div class="loader-logo">🌿 PARA-VÉGÉTAL</div><div class="loader-bar"><div class="loader-bar-fill"></div></div></div></div>
+<div class="custom-cursor" id="cursor"></div>
+
+<nav class="nav scrolled" id="navbar">
+  <a href="index.html" class="nav-logo"><span class="leaf"></span>PARA-VÉGÉTAL</a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Accueil</a>
+    <a href="products.html">Nos Plantes</a>
+    <a href="blog.html">Journal</a>
+    <a href="contact.html" class="nav-cta active">Contact</a>
+  </div>
+  <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+</nav>
+
+<header class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Accueil</a> <span>/</span> <span>Contact</span></div>
+    <span class="label">Parlons de votre projet</span>
+    <h1>Nous <span class="accent-font">Contacter</span></h1>
+    <p>Notre équipe est à votre disposition pour répondre à toutes vos questions et vous accompagner dans vos projets.</p>
+  </div>
+</header>
+
+<section class="contact-page section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <span class="label">Restons en Contact</span>
+        <h2>Informations de Contact</h2>
+        <p>N'hésitez pas à nous contacter par téléphone, email ou en visitant directement notre pépinière sur la route de l'Ourika.</p>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📍</div>
+          <div class="contact-detail-text">
+            <strong>Adresse</strong>
+            <span>P2017, Lahebichate<br>Route de l'Ourika, Marrakech</span>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📞</div>
+          <div class="contact-detail-text">
+            <strong>Téléphone</strong>
+            <span>+212 524 380 885<br>+212 661 707 249<br>+212 668 051 532</span>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">✉️</div>
+          <div class="contact-detail-text">
+            <strong>E-mail</strong>
+            <span>para-vegetal@gmail.com</span>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">🕐</div>
+          <div class="contact-detail-text">
+            <strong>Horaires d'Ouverture</strong>
+            <span>Lun - Sam : 8h00 - 18h00<br>Dimanche : Sur rendez-vous</span>
+          </div>
+        </div>
+
+        <div class="contact-socials">
+          <a href="#" class="contact-social" aria-label="Facebook">f</a>
+          <a href="#" class="contact-social" aria-label="Instagram">📷</a>
+          <a href="#" class="contact-social" aria-label="WhatsApp">💬</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="contact-form reveal">
+          <h3>Envoyez-nous un message</h3>
+          <form id="contactForm" onsubmit="event.preventDefault(); document.getElementById('formSuccess').style.display='block'">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">Prénom *</label>
+                <input type="text" id="firstName" required placeholder="Votre prénom">
+              </div>
+              <div class="form-group">
+                <label for="lastName">Nom *</label>
+                <input type="text" id="lastName" required placeholder="Votre nom">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" required placeholder="votre@email.com">
+              </div>
+              <div class="form-group">
+                <label for="phone">Téléphone</label>
+                <input type="tel" id="phone" placeholder="+212 6XX XXX XXX">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Sujet *</label>
+              <select id="subject" required>
+                <option value="">Choisir un sujet</option>
+                <option>Demande de devis — Paysagisme</option>
+                <option>Achat de plantes</option>
+                <option>Système d'irrigation</option>
+                <option>Entretien espaces verts</option>
+                <option>Poterie</option>
+                <option>Import / Export</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" required placeholder="Décrivez votre projet ou posez-nous vos questions..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">
+              Envoyer le Message <span class="btn-icon">→</span>
+            </button>
+          </form>
+          <div id="formSuccess" style="display:none;margin-top:var(--space-md);padding:var(--space-md);border-radius:var(--radius-sm);background:rgba(11,61,46,.08);color:var(--forest);text-align:center;font-weight:600">
+            ✅ Message envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="contact-map reveal" style="margin-top:var(--space-lg)">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54340.62844264387!2d-7.964889!3d31.582083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafef1f2f42b037%3A0x2a36bb4bbf1a4de7!2sRoute%20de%20l&#39;Ourika%2C%20Marrakech!5e0!3m2!1sfr!2sma!4v1"
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Carte Google Maps — Para-Végétal Marrakech">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="nav-logo"><span class="leaf"></span>PARA-VÉGÉTAL</a><p>Producteur de plants depuis 2005, Para-Végétal est une entreprise à taille humaine fière de ses valeurs.</p></div>
+      <div><h4>Navigation</h4><div class="footer-links"><a href="index.html">Accueil</a><a href="products.html">Nos Plantes</a><a href="blog.html">Journal</a><a href="contact.html">Contact</a></div></div>
+      <div><h4>Services</h4><div class="footer-links"><a href="products.html">Production & Vente</a><a href="contact.html">Paysagisme</a><a href="contact.html">Irrigation</a><a href="contact.html">Entretien</a></div></div>
+      <div class="footer-newsletter"><h4>Newsletter</h4><p>Recevez nos conseils jardinage.</p><form class="footer-newsletter-form" onsubmit="event.preventDefault()"><input type="email" placeholder="Votre e-mail" aria-label="E-mail"><button type="submit">Envoyer</button></form></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Para-Végétal. Tous droits réservés.</span><div class="footer-bottom-links"><a href="#">Mentions Légales</a><a href="#">Politique de Confidentialité</a></div></div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

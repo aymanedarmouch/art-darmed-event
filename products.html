@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Nos Plantes — Para-Végétal | Catalogue Plantes Ornementales Marrakech</title>
+  <meta name="description" content="Découvrez notre catalogue de plantes ornementales d'intérieur et d'extérieur. Monstera, Ficus, Palmiers, Cactus, Oliviers et plus encore.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+</head>
+<body>
+
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <div class="loader-logo">🌿 PARA-VÉGÉTAL</div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+</div>
+<div class="custom-cursor" id="cursor"></div>
+
+<nav class="nav scrolled" id="navbar">
+  <a href="index.html" class="nav-logo"><span class="leaf"></span>PARA-VÉGÉTAL</a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Accueil</a>
+    <a href="products.html" class="active">Nos Plantes</a>
+    <a href="blog.html">Journal</a>
+    <a href="contact.html" class="nav-cta">Contact</a>
+  </div>
+  <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+</nav>
+
+<header class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Accueil</a> <span>/</span> <span>Nos Plantes</span></div>
+    <span class="label">Notre Catalogue</span>
+    <h1>Nos <span class="accent-font">Plantes</span></h1>
+    <p>Explorez notre collection de plantes ornementales soigneusement cultivées dans notre pépinière de Marrakech.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="filter-tabs" id="filterTabs">
+      <button class="filter-tab active" data-filter="all">Toutes</button>
+      <button class="filter-tab" data-filter="indoor">Intérieur</button>
+      <button class="filter-tab" data-filter="outdoor">Extérieur</button>
+      <button class="filter-tab" data-filter="tropical">Tropicales</button>
+      <button class="filter-tab" data-filter="succulent">Succulentes</button>
+      <button class="filter-tab" data-filter="pottery">Poterie</button>
+    </div>
+
+    <div class="products-grid" id="productsGrid">
+      <a href="product-detail.html?id=monstera" class="product-card reveal" data-category="indoor tropical">
+        <div class="product-card-image">
+          <img src="images/product-monstera.png" alt="Monstera Deliciosa" loading="lazy">
+          <span class="product-badge">Populaire</span>
+          <span class="product-wishlist">♡</span>
+        </div>
+        <div class="product-card-body">
+          <div class="product-category">Intérieur • Tropicale</div>
+          <h3>Monstera Deliciosa</h3>
+          <p>Plante tropicale iconique aux feuilles découpées spectaculaires. Parfaite pour illuminer vos intérieurs.</p>
+          <div class="product-price">450 MAD <small>dès</small></div>
+        </div>
+      </a>
+
+      <a href="product-detail.html?id=ficus" class="product-card reveal" data-category="indoor">
+        <div class="product-card-image">
+          <img src="images/product-ficus.png" alt="Ficus Lyrata" loading="lazy">
+          <span class="product-wishlist">♡</span>
+        </div>
+        <div class="product-card-body">
+          <div class="product-category">Intérieur</div>
+          <h3>Ficus Lyrata</h3>
+          <p>Le figuier lyre, élégant et sculptural. Ses larges feuilles en forme de violon sont majestueuses.</p>
+          <div class="product-price">380 MAD <small>dès</small></div>
+        </div>
+      </a>
+
+      <a href="product-detail.html?id=palm" class="product-card reveal" data-category="indoor outdoor tropical">
+        <div class="product-card-image">
+          <img src="images/product-palm.png" alt="Palmier Areca" loading="lazy">
+          <span class="product-badge">Nouveau</span>
+          <span class="product-wishlist">♡</span>
+        </div>
+        <div class="product-card-body">
+          <div class="product-category">Intérieur • Extérieur</div>
+          <h3>Palmier Areca</h3>
+          <p>Palmier d'intérieur aux palmes gracieuses et purificatrices d'air. Apporte une touche tropicale.</p>
+          <div class="product-price">320 MAD <small>dès</small></div>
+        </div>
+      </a>
+
+      <a href="product-detail.html?id=bougainvillea" class="product-card reveal" data-category="outdoor">
+        <div class="product-card-image">
+          <img src="images/product-bougainvillea.png" alt="Bougainvillier" loading="lazy">
+          <span class="product-wishlist">♡</span>
+        </div>
+        <div class="product-card-body">
+          <div class="product-category">Extérieur • Méditerranéen</div>
+          <h3>Bougainvillier</h3>
+          <p>Cascade de couleurs vibrantes magenta et rose pour vos terrasses et jardins méditerranéens.</p>
+          <div class="product-price">280 MAD <small>dès</small></div>
+        </div>
+      </a>
+
+      <a href="product-detail.html?id=cactus" class="product-card reveal" data-category="indoor succulent">
+        <div class="product-card-image">
+          <img src="images/product-cactus.png" alt="Collection Succulentes" loading="lazy">
+          <span class="product-badge">Collection</span>
+          <span class="product-wishlist">♡</span>
+        </div>
+        <div class="product-card-body">
+          <div class="product-category">Succulentes & Cactées</div>
+          <h3>Collection Succulentes</h3>
+          <p>Ensemble de cactées et succulentes variées dans des pots artisanaux en terre cuite.</p>
+          <div class="product-price">150 MAD <small>dès</small></div>
+        </div>
+      </a>
+
+      <a href="product-detail.html?id=olive" class="product-card reveal" data-category="outdoor">
+        <div class="product-card-image">
+          <img src="images/product-olive.png" alt="Olivier en Pot" loading="lazy">
+          <span class="product-wishlist">♡</span>
+        </div>
+        <div class="product-card-body">
+          <div class="product-category">Extérieur • Méditerranéen</div>
+          <h3>Olivier en Pot</h3>
+          <p>Olivier mature au tronc noueux, symbole de paix et de longévité méditerranéenne.</p>
+          <div class="product-price">850 MAD <small>dès</small></div>
+        </div>
+      </a>
+
+      <a href="product-detail.html?id=pottery" class="product-card reveal" data-category="pottery">
+        <div class="product-card-image">
+          <img src="images/product-pottery.png" alt="Poterie Marocaine" loading="lazy">
+          <span class="product-badge">Artisanal</span>
+          <span class="product-wishlist">♡</span>
+        </div>
+        <div class="product-card-body">
+          <div class="product-category">Poterie Artisanale</div>
+          <h3>Collection Poterie Marocaine</h3>
+          <p>Pots et jardinières artisanaux marocains, faits main avec des motifs traditionnels.</p>
+          <div class="product-price">120 MAD <small>dès</small></div>
+        </div>
+      </a>
+
+      <a href="product-detail.html?id=jasmine" class="product-card reveal" data-category="outdoor indoor">
+        <div class="product-card-image">
+          <img src="images/product-jasmine.png" alt="Jasmin en Fleur" loading="lazy">
+          <span class="product-badge">Parfumé</span>
+          <span class="product-wishlist">♡</span>
+        </div>
+        <div class="product-card-body">
+          <div class="product-category">Intérieur • Extérieur</div>
+          <h3>Jasmin en Fleur</h3>
+          <p>Jasmin aux fleurs blanches délicates et au parfum envoûtant. Idéal pour balcons et terrasses.</p>
+          <div class="product-price">220 MAD <small>dès</small></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-banner reveal">
+      <span class="label">Besoin de conseils ?</span>
+      <h2>Nos experts vous <span class="accent-font">accompagnent</span></h2>
+      <p>Chaque plante mérite l'attention d'un expert. Contactez-nous pour des conseils personnalisés.</p>
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn btn-gold">Nous Contacter <span class="btn-icon">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo"><span class="leaf"></span>PARA-VÉGÉTAL</a>
+        <p>Producteur de plants depuis 2005, Para-Végétal est une entreprise à taille humaine fière de ses valeurs.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <div class="footer-links">
+          <a href="index.html">Accueil</a>
+          <a href="products.html">Nos Plantes</a>
+          <a href="blog.html">Journal</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <div class="footer-links">
+          <a href="products.html">Production & Vente</a>
+          <a href="contact.html">Paysagisme</a>
+          <a href="contact.html">Irrigation</a>
+          <a href="contact.html">Entretien</a>
+        </div>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Newsletter</h4>
+        <p>Recevez nos conseils jardinage et nos offres exclusives.</p>
+        <form class="footer-newsletter-form" onsubmit="event.preventDefault()">
+          <input type="email" placeholder="Votre e-mail" aria-label="E-mail">
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Para-Végétal. Tous droits réservés.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Mentions Légales</a>
+        <a href="#">Politique de Confidentialité</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
