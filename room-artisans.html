@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>La Chambre des Artisans — Art Darmed Event</title>
+  <meta name="description" content="Our largest room featuring a traditional salon corner, stained glass window, and hand-woven décor in the heart of Marrakech Medina.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="room-detail.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍲</text></svg>">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav scrolled" id="navbar">
+  <a href="index.html" class="nav-logo" id="navLogo">
+    <span class="logo-icon">✦</span>
+    Art Darmed Event
+  </a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html#hero">Home</a>
+    <a href="index.html#experience">Experience</a>
+    <a href="index.html#rooms" class="active">Rooms</a>
+    <a href="index.html#menu">Menu</a>
+    <a href="index.html#blog">Journal</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#reservation" class="nav-cta">Book Your Experience</a>
+  </div>
+  <div class="lang-toggle" id="langToggle">
+    <button class="lang-btn active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="fr">FR</button>
+  </div>
+  <div class="nav-toggle" id="navToggle">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Room Hero -->
+<section class="room-hero">
+  <div class="room-hero-bg" style="background-image:url('images/room-artisans.png')"></div>
+  <div class="room-hero-overlay"></div>
+  <div class="room-hero-content">
+    <a href="index.html#rooms" class="room-back-link">← Back to All Rooms</a>
+    <span class="label">La Chambre des Artisans</span>
+    <h1>La Chambre des <span class="accent">Artisans</span></h1>
+    <div class="room-hero-price">from <strong>600 MAD</strong> / night</div>
+  </div>
+</section>
+
+<!-- Room Details -->
+<section class="section">
+  <div class="container">
+    <div class="room-detail-grid">
+      <!-- Photo Gallery -->
+      <div class="room-gallery" id="roomGallery">
+        <div class="room-gallery-main">
+          <img src="images/room-artisans.png" alt="La Chambre des Artisans — main view" id="galleryMainImg">
+        </div>
+        <div class="room-gallery-thumbs" id="galleryThumbs">
+          <button class="room-thumb active" onclick="changeGalleryImage(this)">
+            <img src="images/room-artisans.png" alt="Room view 1">
+          </button>
+          <!-- More thumbnails will be added when user provides photos -->
+        </div>
+      </div>
+
+      <!-- Room Info -->
+      <div class="room-info">
+        <h2>About This Room</h2>
+        <p class="room-description">
+          Our largest and most luxurious space, La Chambre des Artisans celebrates Marrakech's rich heritage of craft. Styled with a traditional salon corner, a majestic stained glass window, and stunning hand-woven décor, it offers a grand and authentic riad experience.
+        </p>
+        <p class="room-description">
+          Relax in the built-in plaster carved seating nook, admire the colorful light patterns filtered through the custom-crafted glass, and enjoy premium comfort with hand-selected textiles and rugs sourced directly from local Medina artisan workshops.
+        </p>
+
+        <div class="room-amenities">
+          <h3>Room Amenities</h3>
+          <div class="amenities-grid">
+            <div class="amenity-item"><span class="amenity-icon">🛏️</span> King Bed</div>
+            <div class="amenity-item"><span class="amenity-icon">🛁</span> Private Bathroom</div>
+            <div class="amenity-item"><span class="amenity-icon">❄️</span> Air Conditioning</div>
+            <div class="amenity-item"><span class="amenity-icon">📶</span> Free Wi-Fi</div>
+            <div class="amenity-item"><span class="amenity-icon">🛋️</span> Traditional Salon</div>
+            <div class="amenity-item"><span class="amenity-icon">🖼️</span> Artisan Décor</div>
+            <div class="amenity-item"><span class="amenity-icon">🧴</span> Toiletries</div>
+            <div class="amenity-item"><span class="amenity-icon">☕</span> Tea Service</div>
+            <div class="amenity-item"><span class="amenity-icon">🔒</span> Room Safe</div>
+          </div>
+        </div>
+
+        <!-- Room Booking Widget -->
+        <div class="room-booking-widget">
+          <div class="room-price-display">
+            from <span class="price-amount">600 MAD</span> / night
+          </div>
+          
+          <div class="room-booking-form-container">
+            <h3 class="room-booking-title">Book This Room</h3>
+            <div class="room-booking-error" id="bookError"></div>
+            <form class="room-booking-form" id="bookForm" onsubmit="event.preventDefault(); handleRoomBookingSubmit('La Chambre des Artisans');">
+              <div class="form-group-full">
+                <label>Room</label>
+                <input type="text" class="form-input-locked" value="Room — La Chambre des Artisans" readonly>
+              </div>
+              <div>
+                <label for="bookCheckIn">Check-in</label>
+                <input type="date" id="bookCheckIn" required>
+              </div>
+              <div>
+                <label for="bookCheckOut">Check-out</label>
+                <input type="date" id="bookCheckOut" required>
+              </div>
+              <div class="form-group-full">
+                <label for="bookGuests">Number of Guests</label>
+                <input type="number" id="bookGuests" min="1" max="4" required placeholder="1-4">
+              </div>
+              <div class="form-group-full">
+                <label for="bookName">Your Name</label>
+                <input type="text" id="bookName" required placeholder="Full Name">
+              </div>
+              <div class="form-group-full">
+                <label for="bookRequests">Special Requests (Optional)</label>
+                <textarea id="bookRequests" placeholder="Dietary needs, arrival time, etc..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-book-submit">
+                Book via WhatsApp →
+              </button>
+              <div class="booking-note">⚡ We confirm within 2 hours</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Other Rooms -->
+    <div class="other-rooms">
+      <h2 class="other-rooms-title">Explore Our Other Rooms</h2>
+      <div class="other-rooms-grid">
+        <a href="room-souk.html" class="other-room-card">
+          <img src="images/room-souk-1.jpg" alt="La Chambre du Souk" loading="lazy">
+          <div class="other-room-info">
+            <h3>La Chambre du Souk</h3>
+            <span class="other-room-price">from 600 MAD/night</span>
+          </div>
+        </a>
+        <a href="room-atlas.html" class="other-room-card">
+          <img src="images/room-toit-1.jpg" alt="La Chambre de l'Atlas" loading="lazy">
+          <div class="other-room-info">
+            <h3>La Chambre de l'Atlas</h3>
+            <span class="other-room-price">from 600 MAD/night</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <span class="logo-icon">✦</span>
+          Art Darmed Event
+        </a>
+        <p>Moroccan cooking classes in the heart of the Marrakech Medina. Discover the art of tagine, couscous, and pastry in our centuries-old riad.</p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <div class="footer-links">
+          <a href="index.html#hero">Home</a>
+          <a href="index.html#experience">Experience</a>
+          <a href="index.html#rooms">Rooms</a>
+          <a href="index.html#menu">Menu</a>
+          <a href="index.html#about">About</a>
+        </div>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <div class="footer-links">
+          <a href="https://wa.me/212654508426" target="_blank" rel="noopener">+212 654 508 426 (WhatsApp)</a>
+          <a href="#">Derb Sidi Bouloukate, Medina</a>
+          <a href="#">Marrakech, Morocco</a>
+        </div>
+      </div>
+      <div class="footer-social-col">
+        <h4>Follow Us</h4>
+        <div class="footer-socials">
+          <a href="#" class="footer-social" aria-label="Instagram">𝕀𝔾</a>
+          <a href="#" class="footer-social" aria-label="Facebook">𝔽𝔹</a>
+          <a href="#" class="footer-social" aria-label="TripAdvisor">𝕋𝔸</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Art Darmed Event. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Gallery image switching
+function changeGalleryImage(thumb) {
+  const mainImg = document.getElementById('galleryMainImg');
+  const src = thumb.querySelector('img').src;
+  mainImg.src = src;
+  document.querySelectorAll('.room-thumb').forEach(t => t.classList.remove('active'));
+  thumb.classList.add('active');
+}
+
+// Mobile nav toggle
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navToggle.classList.remove('open');
+      navLinks.classList.remove('open');
+    });
+  });
+}
+
+// Initialize date pickers and reservation logic
+document.addEventListener('DOMContentLoaded', () => {
+  const checkInInput = document.getElementById('bookCheckIn');
+  const checkOutInput = document.getElementById('bookCheckOut');
+  if (checkInInput && checkOutInput) {
+    const today = new Date().toISOString().split('T')[0];
+    checkInInput.min = today;
+    checkInInput.addEventListener('change', () => {
+      checkOutInput.min = checkInInput.value;
+    });
+  }
+});
+
+function handleRoomBookingSubmit(roomName) {
+  const checkIn = document.getElementById('bookCheckIn').value;
+  const checkOut = document.getElementById('bookCheckOut').value;
+  const guests = document.getElementById('bookGuests').value;
+  const name = document.getElementById('bookName').value.trim();
+  const requests = document.getElementById('bookRequests').value.trim() || 'None';
+  const errorEl = document.getElementById('bookError');
+
+  errorEl.style.display = 'none';
+  errorEl.textContent = '';
+
+  if (!checkIn || !checkOut || !guests || !name) {
+    errorEl.textContent = 'Please fill in all required fields.';
+    errorEl.style.display = 'block';
+    return;
+  }
+
+  if (new Date(checkOut) <= new Date(checkIn)) {
+    errorEl.textContent = 'Check-out date must be after check-in date.';
+    errorEl.style.display = 'block';
+    return;
+  }
+
+  // Format dates: YYYY-MM-DD -> DD/MM/YYYY
+  const formatDate = (dateStr) => {
+    const parts = dateStr.split('-');
+    return `${parts[2]}/${parts[1]}/${parts[0]}`;
+  };
+
+  const formattedCheckIn = formatDate(checkIn);
+  const formattedCheckOut = formatDate(checkOut);
+
+  const message = `Hello! I would like to book a room at Dar Med Art Event.
+
+Room: Room — ${roomName}
+Check-in: ${formattedCheckIn}
+Check-out: ${formattedCheckOut}
+Guests: ${guests}
+Name: ${name}
+Special requests: ${requests}
+
+Please confirm my booking. Thank you!`;
+
+  const encodedMessage = encodeURIComponent(message);
+  const waUrl = `https://wa.me/212654508426?text=${encodedMessage}`;
+  window.open(waUrl, '_blank');
+}
+</script>
+</body>
+</html>

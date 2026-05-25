@@ -178,6 +178,23 @@ function initGSAP() {
     });
   });
 
+  // Room card tilt
+  document.querySelectorAll('.room-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      gsap.to(card, {
+        rotateY: x * 6, rotateX: -y * 6,
+        duration: 0.3, ease: 'power2.out',
+        transformPerspective: 800,
+      });
+    });
+    card.addEventListener('mouseleave', () => {
+      gsap.to(card, { rotateX: 0, rotateY: 0, duration: 0.5, ease: 'elastic.out(1,0.5)' });
+    });
+  });
+
   // ====== Anti-Gravity Parallax Effect ======
   document.querySelectorAll('[data-parallax]').forEach(el => {
     const speed = parseFloat(el.dataset.parallaxSpeed) || 0.1;

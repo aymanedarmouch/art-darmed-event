@@ -3,8 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Dar Med Art Event — Moroccan Cooking Classes in Marrakech Medina</title>
-  <meta name="description" content="Dar Med Art Event offers immersive Moroccan cooking classes in the heart of the Marrakech Medina. Souk tours, hands-on preparation, and authentic tasting experiences in a traditional riad.">
+  <title>Art Darmed Event — Moroccan Cooking Classes & Riad in Marrakech Medina</title>
+  <meta name="description" content="Book an authentic Moroccan cooking class or stay in our riad in the heart of Marrakech Medina. Small groups, rooftop dining, real recipes. Book via WhatsApp.">
+  <meta name="keywords" content="cooking class Marrakech, Moroccan cooking class, riad Marrakech Medina, cooking class Medina, Marrakech experience, tajine class Marrakech">
+  <meta property="og:title" content="Art Darmed Event — Cooking Classes & Riad Marrakech">
+  <meta property="og:description" content="Authentic Moroccan cooking classes and riad rooms in Derb Zaouia, Marrakech Medina. Small groups, rooftop dining, book via WhatsApp.">
+  <meta property="og:url" content="https://art-darmed-event.vercel.app/">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://art-darmed-event.vercel.app/">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍲</text></svg>">
 </head>
@@ -15,7 +21,7 @@
   <div class="loader-inner">
     <div class="loader-logo">
       <span class="loader-icon">✦</span>
-      DAR MED ART EVENT
+      ART DARMED EVENT
     </div>
     <div class="loader-bar"><div class="loader-bar-fill"></div></div>
     <p class="loader-tagline" data-i18n="loader.tagline">Taste the Soul of Marrakech</p>
@@ -26,16 +32,16 @@
 <nav class="nav" id="navbar">
   <a href="#" class="nav-logo" id="navLogo">
     <span class="logo-icon">✦</span>
-    Dar Med Art
+    Art Darmed Event
   </a>
   <div class="nav-links" id="navLinks">
     <a href="#hero" class="active" data-i18n="nav.home">Home</a>
     <a href="#experience" data-i18n="nav.experience">Experience</a>
-    <a href="#ebooks" data-i18n="nav.ebooks">E-Books</a>
+    <a href="#rooms" data-i18n="nav.rooms">Rooms</a>
     <a href="#menu" data-i18n="nav.menu">Menu</a>
-    <a href="#blog" data-i18n="nav.blog">Blog</a>
+    <a href="#blog" data-i18n="nav.blog">Journal</a>
     <a href="#about" data-i18n="nav.about">About</a>
-    <a href="#hero" class="nav-cta" id="navBookBtn" data-i18n="nav.book">Book Your Class</a>
+    <a href="#reservation" class="nav-cta" id="navBookBtn" data-i18n="nav.book">Book Your Experience</a>
   </div>
   <!-- Language Toggle -->
   <div class="lang-toggle" id="langToggle">
@@ -49,7 +55,7 @@
 
 <!-- ============ HERO SECTION ============ -->
 <section class="hero" id="hero">
-  <div class="hero-bg" id="heroBg" style="background-image:url('images/hero-riad-kitchen.png')"></div>
+  <div class="hero-bg" id="heroBg" style="background-image:url('images/heroimage1.jpg')"></div>
   <div class="hero-overlay"></div>
 
   <!-- Decorative geometric elements -->
@@ -68,11 +74,14 @@
       Immerse yourself in the flavours, aromas, and traditions of Moroccan cuisine. From the bustling souks to our centuries-old riad kitchen, every dish tells a story.
     </p>
     <div class="hero-buttons">
-      <a href="#experience" class="btn btn-primary" id="heroBookBtn">
-        <span data-i18n="hero.book">Book Your Class</span> <span class="btn-icon">→</span>
+      <a href="#reservation" class="btn btn-primary" id="heroBookBtn">
+        <span data-i18n="hero.book">Book Your Experience</span> <span class="btn-icon">→</span>
       </a>
       <a href="#menu" class="btn btn-outline-light">
         <span data-i18n="hero.explore">Explore the Menu</span>
+      </a>
+      <a href="#rooms" class="btn btn-outline-light">
+        <span data-i18n="hero.exploreRooms">Explore Rooms</span>
       </a>
     </div>
 
@@ -82,7 +91,7 @@
         <div class="hero-stat-label" data-i18n="hero.stat1">Years of Tradition</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-number" data-count="5000">0</div>
+        <div class="hero-stat-number" data-count="500">0</div>
         <div class="hero-stat-label" data-i18n="hero.stat2">Guests Welcomed</div>
       </div>
       <div class="hero-stat">
@@ -149,65 +158,128 @@
   </div>
 </section>
 
-<!-- ============ DIGITAL LIBRARY (E-BOOKS) ============ -->
-<section class="section section-sand" id="ebooks">
+<!-- ============ ROOMS ============ -->
+<section class="section section-sand" id="rooms">
   <div class="container">
     <div class="section-header">
-      <span class="label" data-reveal data-i18n="ebook.label">Digital Library</span>
-      <h2 data-reveal data-i18n="ebook.title">Take <span class="accent-font">Morocco</span> Home with You</h2>
-      <p class="lead" data-reveal data-i18n="ebook.lead">
-        Our curated collection of premium cooking e-books brings the flavours of Marrakech to your kitchen, wherever you are in the world.
+      <span class="label" data-reveal data-i18n="rooms.label">Stay With Us</span>
+      <h2 data-reveal data-i18n="rooms.title">Three Rooms in the Heart of the <span class="accent-font">Medina</span></h2>
+      <p class="lead" data-reveal data-i18n="rooms.lead">
+        Extend your experience with an overnight stay in our beautifully restored riad. Each room blends traditional Moroccan craftsmanship with modern comfort.
       </p>
     </div>
 
-    <div class="ebooks-grid">
-      <!-- E-Book 1 -->
-      <div class="ebook-card" id="ebookCard1" data-reveal data-reveal-delay="0">
-        <div class="ebook-card-image">
-          <img src="images/ebook-tagine.png" alt="The Art of Tagine e-book" loading="lazy">
+    <div class="rooms-grid">
+      <!-- Room 1 -->
+      <a href="room-souk.html" class="room-card" id="roomCard1" data-reveal data-reveal-delay="0">
+        <div class="room-card-image">
+          <img src="images/room-souk-1.jpg" alt="La Chambre du Souk — cozy double room with traditional carved arch headboard" loading="lazy">
+          <span class="room-price-tag">from 600 MAD/night</span>
         </div>
-        <div class="ebook-card-body">
-          <span class="ebook-badge" data-i18n="ebook.badge.best">Bestseller</span>
-          <h3 data-i18n="ebook.1.title">The Art of Tagine</h3>
-          <p data-i18n="ebook.1.text">32 authentic tagine recipes — from classic lamb with prunes to modern vegetable variations. Includes step-by-step photography.</p>
-          <div class="ebook-footer">
-            <span class="ebook-price">€14.99</span>
-            <a href="#" class="btn btn-buy" id="buyTagine" data-i18n="ebook.buy">Quick Buy</a>
+        <div class="room-card-body">
+          <h3 data-i18n="rooms.room1.title">La Chambre du Souk</h3>
+          <p data-i18n="rooms.room1.text">A cozy double room with traditional carved arch headboard, Berber blankets, and a private sitting area.</p>
+          <div class="room-card-footer">
+            <span class="room-price" data-i18n="rooms.room1.price">from 600 MAD/night</span>
+            <span class="btn btn-view-room" data-i18n="rooms.view">View Room →</span>
           </div>
         </div>
-      </div>
+      </a>
 
-      <!-- E-Book 2 -->
-      <div class="ebook-card" id="ebookCard2" data-reveal data-reveal-delay="0.15">
-        <div class="ebook-card-image">
-          <img src="images/ebook-pastry.png" alt="Moroccan Pastry Secrets e-book" loading="lazy">
+      <!-- Room 2 -->
+      <a href="room-atlas.html" class="room-card" id="roomCard2" data-reveal data-reveal-delay="0.15">
+        <div class="room-card-image">
+          <img src="images/room-toit-1.jpg" alt="La Chambre de l'Atlas — room near the rooftop terrace" loading="lazy">
+          <span class="room-price-tag">from 600 MAD/night</span>
         </div>
-        <div class="ebook-card-body">
-          <span class="ebook-badge ebook-badge-new" data-i18n="ebook.badge.new">New</span>
-          <h3 data-i18n="ebook.2.title">Moroccan Pastry Secrets</h3>
-          <p data-i18n="ebook.2.text">Master cornes de gazelle, chebakia, and briwat with our pastry chef's guide. Over 25 recipes with professional tips.</p>
-          <div class="ebook-footer">
-            <span class="ebook-price">€12.99</span>
-            <a href="#" class="btn btn-buy" id="buyPastry" data-i18n="ebook.buy">Quick Buy</a>
+        <div class="room-card-body">
+          <h3 data-i18n="rooms.room2.title">La Chambre de l'Atlas</h3>
+          <p data-i18n="rooms.room2.text">Wake up steps from the rooftop terrace. Warm Moroccan textiles and carved plasterwork details.</p>
+          <div class="room-card-footer">
+            <span class="room-price" data-i18n="rooms.room2.price">from 600 MAD/night</span>
+            <span class="btn btn-view-room" data-i18n="rooms.view">View Room →</span>
           </div>
         </div>
-      </div>
+      </a>
 
-      <!-- E-Book 3 -->
-      <div class="ebook-card" id="ebookCard3" data-reveal data-reveal-delay="0.3">
-        <div class="ebook-card-image">
-          <img src="images/ebook-spices.png" alt="Spice Routes of Morocco e-book" loading="lazy">
+      <!-- Room 3 -->
+      <a href="room-artisans.html" class="room-card" id="roomCard3" data-reveal data-reveal-delay="0.3">
+        <div class="room-card-image">
+          <img src="images/room-artisans.png" alt="La Chambre des Artisans — largest room with salon corner" loading="lazy">
+          <span class="room-price-tag">from 600 MAD/night</span>
         </div>
-        <div class="ebook-card-body">
-          <span class="ebook-badge ebook-badge-popular" data-i18n="ebook.badge.popular">Popular</span>
-          <h3 data-i18n="ebook.3.title">Spice Routes of Morocco</h3>
-          <p data-i18n="ebook.3.text">A deep dive into 40+ Moroccan spices — their origins, flavour profiles, and how to create the perfect ras el hanout blend at home.</p>
-          <div class="ebook-footer">
-            <span class="ebook-price">€9.99</span>
-            <a href="#" class="btn btn-buy" id="buySpices" data-i18n="ebook.buy">Quick Buy</a>
+        <div class="room-card-body">
+          <h3 data-i18n="rooms.room3.title">La Chambre des Artisans</h3>
+          <p data-i18n="rooms.room3.text">Our largest room with a traditional salon corner, stained glass window, and hand-woven décor.</p>
+          <div class="room-card-footer">
+            <span class="room-price" data-i18n="rooms.room3.price">from 600 MAD/night</span>
+            <span class="btn btn-view-room" data-i18n="rooms.view">View Room →</span>
           </div>
         </div>
-      </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE JOURNAL (BLOG) ============ -->
+<section class="section" id="blog">
+  <div class="container">
+    <div class="section-header">
+      <span class="label" data-reveal data-i18n="blog.home.label">The Journal</span>
+      <h2 data-reveal data-i18n="blog.home.title">Stories from the Medina</h2>
+      <p class="lead" data-reveal data-i18n="blog.home.subtitle">
+        Recipes, travel tips and Moroccan culinary culture — straight from our kitchen in Marrakech
+      </p>
+    </div>
+
+    <div class="blog-grid">
+      <!-- Blog Card 1 -->
+      <article class="blog-card" data-reveal data-reveal-delay="0">
+        <div class="blog-card-image">
+          <img src="images/blog-cooking-class.jpg" alt="What to Expect from a Cooking Class in the Marrakech Medina" loading="lazy">
+          <span class="blog-card-badge">5 min</span>
+        </div>
+        <div class="blog-card-body">
+          <span class="blog-card-category" data-i18n="blog.post1.cat">Experience</span>
+          <h3 data-i18n="blog.post1.title">What to Expect from a Cooking Class in the Marrakech Medina</h3>
+          <p data-i18n="blog.post1.excerpt">You've seen the photos — the rooftops, the spices piled high in the souk, the steam rising from a clay tajine. But nothing prepares you for actually being inside a Marrakech kitchen, hands dusted with cumin, learning to roll couscous the way Moroccan grandmothers have for centuries.</p>
+          <div class="blog-card-footer">
+            <a href="blog-cooking-class.html" class="btn btn-buy" data-i18n="blog.read_more">Read the Article →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Blog Card 2 -->
+      <article class="blog-card" data-reveal data-reveal-delay="0.15">
+        <div class="blog-card-image">
+          <img src="images/blog-five-spices.png" alt="The 5 Spices Every Moroccan Kitchen Needs" loading="lazy">
+          <span class="blog-card-badge">4 min</span>
+        </div>
+        <div class="blog-card-body">
+          <span class="blog-card-category" data-i18n="blog.post2.cat">Cooking Tips</span>
+          <h3 data-i18n="blog.post2.title">The 5 Spices Every Moroccan Kitchen Needs</h3>
+          <p data-i18n="blog.post2.excerpt">Moroccan cuisine is not complicated. It is layered. The difference between a flat dish and one that makes people go quiet at the table is almost always the spices — and knowing how to use them together.</p>
+          <div class="blog-card-footer">
+            <a href="blog-five-spices.html" class="btn btn-buy" data-i18n="blog.read_more">Read the Article →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Blog Card 3 -->
+      <article class="blog-card" data-reveal data-reveal-delay="0.3">
+        <div class="blog-card-image">
+          <img src="images/blog-rooftop.jpg" alt="Why We Cook on the Rooftop" loading="lazy">
+          <span class="blog-card-badge">3 min</span>
+        </div>
+        <div class="blog-card-body">
+          <span class="blog-card-category" data-i18n="blog.post3.cat">About Us</span>
+          <h3 data-i18n="blog.post3.title">Why We Cook on the Rooftop</h3>
+          <p data-i18n="blog.post3.excerpt">Most cooking classes happen in a basement or a hotel kitchen. Ours happens on a rooftop above the Medina, under a blue canvas canopy, with the call to prayer drifting across the city and the light changing from afternoon gold to evening rose as you eat.</p>
+          <div class="blog-card-footer">
+            <a href="blog-rooftop.html" class="btn btn-buy" data-i18n="blog.read_more">Read the Article →</a>
+          </div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -324,128 +396,183 @@
   </div>
 </section>
 
-<!-- ============ THE CULINARY GRAVITY — BLOG ============ -->
-<section class="section gravity-blog" id="blog">
+<!-- ============ TESTIMONIALS SECTION ============ -->
+<section class="section testimonials-section" id="testimonials">
   <div class="container">
-
-    <!-- Section Header -->
-    <div class="section-header gravity-header" data-reveal>
-      <span class="label" data-i18n="blog.label">The Journal</span>
-      <h2 data-i18n="blog.title">The Culinary <span class="accent-font">Gravity</span></h2>
-      <p class="lead" data-i18n="blog.lead">Stories that float between tradition and innovation — where Moroccan heritage meets modern culinary thought.</p>
-      <!-- Decorative architectural lines -->
-      <div class="gravity-lines">
-        <span></span><span></span><span></span>
-      </div>
+    <div class="section-header">
+      <span class="label" data-reveal data-i18n="test.label">What Our Guests Say</span>
+      <h2 data-reveal data-i18n="test.title">4.9 ★ on Google Maps</h2>
+      <p class="lead" data-reveal data-i18n="test.subtitle">Over 80 guests have shared their experience — here are a few of their stories</p>
     </div>
 
-    <!-- Timeline Container -->
-    <div class="gravity-timeline">
-      <!-- Vertical timeline axis -->
-      <div class="timeline-axis" aria-hidden="true"></div>
-
-      <!-- ─── POST 1 ─── -->
-      <article class="gravity-post gravity-post--left" data-reveal data-reveal-delay="0">
-        <div class="gravity-post-inner">
-          <!-- Floating Image -->
-          <div class="gravity-post-media">
-            <div class="gravity-float-wrapper" data-parallax data-parallax-speed="-0.15">
-              <img src="images/blog-floating-spices.png"
-                   alt="Moroccan spices floating weightlessly in mid-air — saffron, cumin, paprika, cinnamon, and rose petals in zero gravity"
-                   loading="lazy" class="gravity-img">
-            </div>
-            <!-- Floating accent elements -->
-            <div class="gravity-accent gravity-accent-1" data-parallax data-parallax-speed="0.1"></div>
-            <div class="gravity-accent gravity-accent-2" data-parallax data-parallax-speed="-0.08"></div>
-          </div>
-          <!-- Text Content -->
-          <div class="gravity-post-content">
-            <div class="gravity-post-meta">
-              <span class="gravity-tag" data-i18n="blog.tag1">Culinary Design</span>
-              <time datetime="2026-03-20">March 20, 2026</time>
-            </div>
-            <h2 class="gravity-post-title" data-i18n="blog.post1.title">Marrakech Culinary Design: Where Spice Meets Space</h2>
-            <p class="gravity-post-excerpt" data-i18n="blog.post1.excerpt">How the ancient spice markets of the Medina are inspiring a new wave of culinary architecture — where flavour profiles are designed like floor plans.</p>
-            <a href="blog-culinary-design.html" class="btn btn-glow" id="blogRead1"><span data-i18n="blog.read">Read the Story</span> <span class="btn-icon">→</span></a>
+    <div class="testimonials-grid">
+      <!-- Card 1 -->
+      <div class="testimonial-card" data-reveal data-reveal-delay="0">
+        <div>
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-text-container">
+            <span class="testimonial-quote">“</span>
+            <p class="testimonial-text" data-i18n="test.card1.text">
+              We had a wonderful experience at this Moroccan cooking class. The food was absolutely delicious, and the whole activity was engaging and genuinely fun from start to finish. The staff was incredibly kind and accommodating, making sure every need of our group was met with great attention and care. I truly hope to come back again if I return to Marrakech.
+            </p>
           </div>
         </div>
-        <!-- Timeline node -->
-        <div class="timeline-node"><span>01</span></div>
-      </article>
-
-      <!-- ─── POST 2 ─── -->
-      <article class="gravity-post gravity-post--right" data-reveal data-reveal-delay="0.15">
-        <div class="gravity-post-inner">
-          <!-- Floating Image -->
-          <div class="gravity-post-media">
-            <div class="gravity-float-wrapper" data-parallax data-parallax-speed="0.12">
-              <img src="images/blog-levitating-tajine.png"
-                   alt="Traditional Moroccan tajine pot levitating in mid-air with steam and golden saffron sauce, defying gravity"
-                   loading="lazy" class="gravity-img">
-            </div>
-            <div class="gravity-accent gravity-accent-3" data-parallax data-parallax-speed="-0.12"></div>
+        <div class="testimonial-footer">
+          <div class="testimonial-reviewer-container">
+            <span class="testimonial-reviewer" data-i18n="test.card1.name">Mattia Guerciotti</span>
           </div>
-          <!-- Text Content -->
-          <div class="gravity-post-content">
-            <div class="gravity-post-meta">
-              <span class="gravity-tag" data-i18n="blog.tag2">Tradition</span>
-              <time datetime="2026-03-15">March 15, 2026</time>
-            </div>
-            <h2 class="gravity-post-title" data-i18n="blog.post2.title">The Art of the Tajine: A Vessel Between Worlds</h2>
-            <p class="gravity-post-excerpt" data-i18n="blog.post2.excerpt">The conical lid isn't just design — it's physics. Explore how the tajine's ancient geometry creates a closed-loop flavour system that modern chefs can't replicate.</p>
-            <a href="blog-art-of-tajine.html" class="btn btn-glow" id="blogRead2"><span data-i18n="blog.read">Read the Story</span> <span class="btn-icon">→</span></a>
+          <div class="testimonial-badges">
+            <span class="badge" data-i18n="test.card1.badge1">Food ★5</span>
+            <span class="badge" data-i18n="test.card1.badge2">Service ★5</span>
+            <span class="badge" data-i18n="test.card1.badge3">Ambiance ★5</span>
           </div>
         </div>
-        <div class="timeline-node"><span>02</span></div>
-      </article>
+      </div>
 
-      <!-- ─── POST 3 ─── -->
-      <article class="gravity-post gravity-post--left" data-reveal data-reveal-delay="0.3">
-        <div class="gravity-post-inner">
-          <!-- Floating Image -->
-          <div class="gravity-post-media">
-            <div class="gravity-float-wrapper" data-parallax data-parallax-speed="-0.1">
-              <img src="images/blog-suspended-arch.png"
-                   alt="Moroccan horseshoe arch and zellige tile fragments floating weightlessly in a surreal desert landscape"
-                   loading="lazy" class="gravity-img">
-            </div>
-            <div class="gravity-accent gravity-accent-4" data-parallax data-parallax-speed="0.15"></div>
-            <div class="gravity-accent gravity-accent-5" data-parallax data-parallax-speed="-0.06"></div>
-          </div>
-          <!-- Text Content -->
-          <div class="gravity-post-content">
-            <div class="gravity-post-meta">
-              <span class="gravity-tag" data-i18n="blog.tag3">Modern Fusion</span>
-              <time datetime="2026-03-08">March 8, 2026</time>
-            </div>
-            <h2 class="gravity-post-title" data-i18n="blog.post3.title">Modern Moroccan Recipes: Deconstructing the Medina on a Plate</h2>
-            <p class="gravity-post-excerpt" data-i18n="blog.post3.excerpt">A new generation of chefs is suspended between reverence and rebellion — breaking apart centuries-old recipes and reassembling them in weightless new forms.</p>
-            <a href="blog-modern-recipes.html" class="btn btn-glow" id="blogRead3"><span data-i18n="blog.read">Read the Story</span> <span class="btn-icon">→</span></a>
+      <!-- Card 2 -->
+      <div class="testimonial-card" data-reveal data-reveal-delay="0.15">
+        <div>
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-text-container">
+            <span class="testimonial-quote">“</span>
+            <p class="testimonial-text" data-i18n="test.card2.text">
+              What an amazing thing to do in Marrakesh, learning to cook the local cuisine with local people. We spent a few hours learning to cook vegetarian couscous and Harira soup with Abdullah and his team. They were very friendly, knowledgeable and gave us full attention. We didn't feel rushed and were able to enjoy our food afterwards which was delicious. We highly recommend this experience.
+            </p>
           </div>
         </div>
-        <div class="timeline-node"><span>03</span></div>
-      </article>
-
-    </div><!-- /gravity-timeline -->
-
-    <!-- ─── ANTI-GRAVITY E-BOOKS CTA ─── -->
-    <div class="gravity-ebook-cta" data-reveal>
-      <div class="gravity-ebook-cta-bg"></div>
-      <div class="gravity-ebook-cta-inner">
-        <div class="gravity-ebook-image" data-parallax data-parallax-speed="-0.08">
-          <img src="images/blog-floating-ebook.png"
-               alt="Anti-Gravity Culinary Arts e-book floating in mid-air with Moroccan spices orbiting around it"
-               loading="lazy">
+        <div class="testimonial-footer">
+          <div class="testimonial-reviewer-container">
+            <span class="testimonial-reviewer" data-i18n="test.card2.name">Nadir Sayani</span>
+          </div>
+          <div class="testimonial-badges">
+            <span class="badge" data-i18n="test.card2.badge1">Food ★5</span>
+            <span class="badge" data-i18n="test.card2.badge2">Service ★4</span>
+            <span class="badge" data-i18n="test.card2.badge3">Ambiance ★5</span>
+          </div>
         </div>
-        <div class="gravity-ebook-text">
-          <span class="label" data-i18n="blog.cta.label">New Collection</span>
-          <h2 data-i18n="blog.cta.title">Anti-Gravity <span class="accent-font">Culinary E-Books</span></h2>
-          <p data-i18n="blog.cta.text">Our weightless recipe collections let you cook Moroccan dishes that transcend the ordinary. Beautifully designed, endlessly inspiring.</p>
-          <a href="#ebooks" class="btn btn-glow-lg" id="gravityEbookCta"><span data-i18n="blog.cta.btn">Explore the Collection</span> <span class="btn-icon">→</span></a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="testimonial-card" data-reveal data-reveal-delay="0.3">
+        <div>
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-text-container">
+            <span class="testimonial-quote">“</span>
+            <p class="testimonial-text" data-i18n="test.card3.text">
+              I attended the cooking class and magically prepared a delicious beef tajine under the supervision of Soufiane and his dear wife. It was a great experience and I enjoyed every minute! Thank you for your hospitality and kindness and the step by step process with a lot of fun and laughter. I greatly enjoyed the time on your beautiful rooftop!
+            </p>
+          </div>
+        </div>
+        <div class="testimonial-footer">
+          <div class="testimonial-reviewer-container">
+            <span class="testimonial-reviewer" data-i18n="test.card3.name">Eduard Boger</span>
+          </div>
+          <div class="testimonial-badges">
+            <span class="badge" data-i18n="test.card3.badge1">Food ★5</span>
+            <span class="badge" data-i18n="test.card3.badge2">Service ★5</span>
+            <span class="badge" data-i18n="test.card3.badge3">Ambiance ★5</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="testimonial-card" data-reveal data-reveal-delay="0.45">
+        <div>
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-text-container">
+            <span class="testimonial-quote">“</span>
+            <p class="testimonial-text" data-i18n="test.card4.text">
+              Amazing cooking class — Morocco style evening experience! It was so much more than a cooking class, it was a full immersion into Moroccan and Marrakech culture. We learnt some Berber and Arabic language, got to experience traditional dresses and watched the sunset from the rooftop. The cooking element was amazing — we learned a lot about the spices, the processes and the cooking style. The tea making was an additional bonus which was super fun. They were also very accommodating to my gluten free allergy. Thank you to the team for a great evening!
+            </p>
+          </div>
+        </div>
+        <div class="testimonial-footer">
+          <div class="testimonial-reviewer-container">
+            <span class="testimonial-reviewer" data-i18n="test.card4.name">Lucy Rollins</span>
+            <span class="local-guide-badge" data-i18n="test.card4.guide">✓ Local Guide</span>
+          </div>
+          <div class="testimonial-badges">
+            <span class="badge" data-i18n="test.card4.badge1">Food ★5</span>
+            <span class="badge" data-i18n="test.card4.badge2">Service ★5</span>
+            <span class="badge" data-i18n="test.card4.badge3">Ambiance ★5</span>
+            <span class="badge badge-special" data-i18n="test.card4.badge4">Gluten-free friendly ✓</span>
+          </div>
         </div>
       </div>
     </div>
 
+    <div class="testimonials-action" data-reveal>
+      <a href="https://maps.app.goo.gl/nyxLG1bn8k43TA537" target="_blank" rel="noopener" class="btn btn-outline-navy" data-i18n="test.button">
+        See All Reviews on Google →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESERVATION SIMULATOR ============ -->
+<section class="reservation-section" id="reservation">
+  <div class="container">
+    <div class="section-header">
+      <span class="label" data-reveal>BOOKING</span>
+      <h2 data-reveal data-i18n="res.title">Book Your Experience</h2>
+      <p class="lead" data-reveal data-i18n="res.subtitle">Choose your date, time and experience — we'll confirm within 2 hours</p>
+    </div>
+
+    <div class="reservation-card" data-reveal>
+      <form class="reservation-form" id="resForm" onsubmit="event.preventDefault(); handleBookingSubmit();">
+        <div class="form-group">
+          <label for="resExperience" data-i18n="res.label.exp">Experience Type</label>
+          <select id="resExperience" required>
+            <option value="" disabled selected data-i18n="res.label.exp">Experience Type</option>
+            <option value="Cooking Class (Half Day)" data-i18n="res.opt.cooking">Cooking Class (Half Day)</option>
+            <option value="Dinner on the Rooftop" data-i18n="res.opt.dinner">Dinner on the Rooftop</option>
+            <option value="Room — La Chambre du Souk" data-i18n="res.opt.souk">Room — La Chambre du Souk</option>
+            <option value="Room — La Chambre de l'Atlas" data-i18n="res.opt.toit">Room — La Chambre de l'Atlas</option>
+            <option value="Room — La Chambre des Artisans" data-i18n="res.opt.artisans">Room — La Chambre des Artisans</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="resGuests" data-i18n="res.label.guests">Number of Guests</label>
+          <input type="number" id="resGuests" min="1" max="12" required placeholder="1-12">
+        </div>
+
+        <div class="form-group">
+          <label for="resDate" data-i18n="res.label.date">Date</label>
+          <input type="date" id="resDate" required>
+        </div>
+
+        <div class="form-group">
+          <label for="resTime" data-i18n="res.label.time">Preferred Time</label>
+          <select id="resTime" required>
+            <option value="" disabled selected data-i18n="res.label.time">Preferred Time</option>
+            <option value="Morning (9:00 AM)" data-i18n="res.opt.morning">Morning (9:00 AM)</option>
+            <option value="Afternoon (2:00 PM)" data-i18n="res.opt.afternoon">Afternoon (2:00 PM)</option>
+            <option value="Evening (6:00 PM)" data-i18n="res.opt.evening">Evening (6:00 PM)</option>
+          </select>
+        </div>
+
+        <div class="form-group form-group-full">
+          <label for="resName" data-i18n="res.label.name">Your Name</label>
+          <input type="text" id="resName" required placeholder="Your full name">
+        </div>
+
+        <div class="form-group form-group-full">
+          <label for="resRequests" data-i18n="res.label.requests">Special Requests (Optional)</label>
+          <textarea id="resRequests" placeholder="Allergies, dietary requirements, or other requests..."></textarea>
+        </div>
+
+        <div class="reservation-error" id="resError"></div>
+
+        <div class="reservation-submit-container">
+          <button type="submit" class="btn btn-saffron" style="justify-content: center; width: 100%; max-width: 320px;">
+            <span data-i18n="res.btn">Book via WhatsApp</span>
+            <span class="btn-icon">→</span>
+          </button>
+          <span class="reservation-note" data-i18n="res.note">⚡ We typically confirm within 2 hours via WhatsApp</span>
+        </div>
+      </form>
+    </div>
   </div>
 </section>
 
@@ -462,7 +589,7 @@
       </div>
       <div class="about-text">
         <span class="label" data-reveal data-i18n="about.label">Our Story</span>
-        <h2 data-reveal data-i18n="about.title">Welcome to the <span class="accent-font">Dar</span></h2>
+        <h2 data-reveal data-i18n="about.title">Welcome to <span class="accent-font">Art Darmed Event</span></h2>
         <p data-reveal data-i18n="about.p1">
           In the heart of the ancient Medina, behind a hand-carved cedarwood door, lies Dar Med Art — a traditional riad that has been our family home for generations. Every tile, every arch, every courtyard fountain carries the memory of countless meals shared and stories told.
         </p>
@@ -501,20 +628,45 @@
         </div>
       </div>
     </div>
+
+    <!-- Google Maps Embed -->
+    <div class="about-map" data-reveal>
+      <h3 class="about-map-title" data-i18n="about.map.title">Find Us in the Medina</h3>
+      <div class="about-map-wrapper">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3397.0!2d-7.9893!3d31.6295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafee8d96179e51%3A0x5950b6534f87adb8!2sDar%20Med%20Art%20Event!5e0!3m2!1sen!2sma!4v1700000000000!5m2!1sen!2sma"
+          width="100%"
+          height="400"
+          style="border:0; border-radius: var(--radius-lg);"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Dar Med Art Event location on Google Maps">
+        </iframe>
+      </div>
+      <a href="https://maps.app.goo.gl/nyxLG1bn8k43TA537" class="about-map-link" target="_blank" rel="noopener" id="mapDirectLink">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <span data-i18n="about.map.link">Open in Google Maps</span>
+        <span class="map-link-arrow">→</span>
+      </a>
+    </div>
   </div>
 </section>
 
 <!-- ============ CTA BANNER ============ -->
-<section class="section">
+<section class="section" id="reservation">
   <div class="container">
     <div class="cta-banner" id="ctaBanner" data-reveal>
       <div class="cta-pattern"></div>
       <span class="label" data-i18n="cta.label">Ready for an unforgettable experience?</span>
-      <h2 data-i18n="cta.title">Reserve Your <span class="accent-font">Cooking Class</span></h2>
+      <h2 data-i18n="cta.title">Book Your <span class="accent-font">Cooking Class</span></h2>
       <p data-i18n="cta.text">Join us in the Medina for a morning of flavours, stories, and the warmest Moroccan hospitality. Classes available daily.</p>
       <div class="cta-buttons">
-        <a href="#" class="btn btn-saffron" id="ctaBookBtn"><span data-i18n="cta.book">Book Now</span> <span class="btn-icon">→</span></a>
-        <a href="mailto:hello@darmedart.com" class="btn btn-white">hello@darmedart.com</a>
+        <a href="https://wa.me/212654508426" class="btn btn-saffron" id="ctaBookBtn" target="_blank" rel="noopener"><span data-i18n="cta.book">Book Now</span> <span class="btn-icon">→</span></a>
+        <a href="https://wa.me/212654508426" class="btn btn-white" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          +212 654 508 426
+        </a>
       </div>
     </div>
   </div>
@@ -527,7 +679,7 @@
       <div class="footer-brand">
         <a href="#" class="nav-logo">
           <span class="logo-icon">✦</span>
-          Dar Med Art
+          Art Darmed Event
         </a>
         <p data-i18n="footer.desc">Moroccan cooking classes in the heart of the Marrakech Medina. Discover the art of tagine, couscous, and pastry in our centuries-old riad.</p>
       </div>
@@ -536,7 +688,7 @@
         <div class="footer-links">
           <a href="#hero" data-i18n="nav.home">Home</a>
           <a href="#experience" data-i18n="nav.experience">Experience</a>
-          <a href="#ebooks" data-i18n="nav.ebooks">E-Books</a>
+          <a href="#rooms" data-i18n="nav.rooms">Rooms</a>
           <a href="#menu" data-i18n="nav.menu">Menu</a>
           <a href="#about" data-i18n="nav.about">About</a>
         </div>
@@ -544,8 +696,7 @@
       <div>
         <h4 data-i18n="footer.contact">Contact</h4>
         <div class="footer-links">
-          <a href="mailto:hello@darmedart.com">hello@darmedart.com</a>
-          <a href="tel:+212600000000">+212 600 000 000</a>
+          <a href="https://wa.me/212654508426" target="_blank" rel="noopener">+212 654 508 426 (WhatsApp)</a>
           <a href="#">Derb Sidi Bouloukate, Medina</a>
           <a href="#">Marrakech, Morocco</a>
         </div>
@@ -574,5 +725,88 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="translations.js"></script>
 <script src="main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const dateInput = document.getElementById('resDate');
+  if (dateInput) {
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.min = today;
+  }
+});
+
+function handleBookingSubmit() {
+  const expEl = document.getElementById('resExperience');
+  const guestsEl = document.getElementById('resGuests');
+  const dateEl = document.getElementById('resDate');
+  const timeEl = document.getElementById('resTime');
+  const nameEl = document.getElementById('resName');
+  const requestsEl = document.getElementById('resRequests');
+  const errorEl = document.getElementById('resError');
+
+  // Clear previous error
+  errorEl.style.display = 'none';
+  errorEl.textContent = '';
+
+  const expVal = expEl.value;
+  const guestsVal = guestsEl.value;
+  const dateVal = dateEl.value;
+  const timeVal = timeEl.value;
+  const nameVal = nameEl.value.trim();
+  const requestsVal = requestsEl.value.trim();
+
+  // Validate fields
+  if (!expVal || !guestsVal || !dateVal || !timeVal || !nameVal) {
+    const lang = localStorage.getItem('darmedart-lang') || 'en';
+    errorEl.textContent = lang === 'fr' 
+      ? 'Veuillez remplir tous les champs obligatoires (Expérience, Invités, Date, Heure et Nom).' 
+      : 'Please fill in all required fields (Experience, Guests, Date, Time, and Name).';
+    errorEl.style.display = 'block';
+    return;
+  }
+
+  const guestsNum = parseInt(guestsVal, 10);
+  if (isNaN(guestsNum) || guestsNum < 1 || guestsNum > 12) {
+    const lang = localStorage.getItem('darmedart-lang') || 'en';
+    errorEl.textContent = lang === 'fr'
+      ? 'Le nombre d\'invités doit être compris entre 1 et 12.'
+      : 'Number of guests must be between 1 and 12.';
+    errorEl.style.display = 'block';
+    return;
+  }
+
+  // Format date: YYYY-MM-DD -> DD/MM/YYYY
+  const dateParts = dateVal.split('-');
+  if (dateParts.length !== 3) {
+    const lang = localStorage.getItem('darmedart-lang') || 'en';
+    errorEl.textContent = lang === 'fr'
+      ? 'Veuillez sélectionner une date valide.'
+      : 'Please select a valid date.';
+    errorEl.style.display = 'block';
+    return;
+  }
+  const formattedDate = `${dateParts[2]}/${dateParts[1]}/${dateParts[0]}`;
+
+  const specialRequests = requestsVal ? requestsVal : 'None';
+
+  // Construct message
+  const message = `Hello! I would like to make a booking at Dar Med Art Event.
+
+Experience: ${expVal}
+Date: ${formattedDate}
+Time: ${timeVal}
+Guests: ${guestsNum} person(s)
+Name: ${nameVal}
+Special requests: ${specialRequests}
+
+Please confirm my booking. Thank you!`;
+
+  // Encode message
+  const encodedMessage = encodeURIComponent(message);
+  
+  // Open WhatsApp link
+  const waUrl = `https://wa.me/212654508426?text=${encodedMessage}`;
+  window.open(waUrl, '_blank');
+}
+</script>
 </body>
 </html>
