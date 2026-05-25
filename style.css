@@ -671,9 +671,13 @@ h4 { font-size:1.15rem; font-family:var(--font-body); font-weight:600 }
 
 @media(max-width:900px) {
   .rooms-grid { grid-template-columns: repeat(2, 1fr) }
+  .room-card-body { padding: 1.5rem; }
 }
 @media(max-width:600px) {
   .rooms-grid { grid-template-columns: 1fr }
+  .room-card-body { padding: 1.25rem; }
+  .room-price { font-size: 1rem; }
+  .btn-view-room { padding: 0.5rem 1rem; }
 }
 
 /* ---------- Menu Section ---------- */
