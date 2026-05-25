@@ -269,6 +269,23 @@ h4 { font-size:1.15rem; font-family:var(--font-body); font-weight:600 }
   color: var(--saffron);
   transition: transform var(--duration-med) var(--ease-spring);
 }
+.logo-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid var(--saffron);
+  transition: transform var(--duration-med) var(--ease-spring);
+}
+.nav-logo:hover .logo-img {
+  transform: scale(1.1) rotate(15deg);
+}
+.loader-logo .logo-img {
+  width: 48px;
+  height: 48px;
+  border: 2px solid var(--saffron);
+  animation: spin 3s linear infinite;
+}
 .nav-logo:hover .logo-icon { transform:rotate(90deg) }
 
 .nav-links { display:flex; gap:2rem; align-items:center }
