@@ -2,7 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://artdarmedevent.com/</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://artdarmedevent.com/fr/</loc>
+    <lastmod>2026-05-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>

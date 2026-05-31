@@ -7,3 +7,10 @@
 # OS / editor cruft
 .DS_Store
 Thumbs.db
+
+# Node build tooling (French page generator) — not part of the deployed site
+/node_modules/
+package.json
+package-lock.json
+gen-fr.js
+serve-audit.js
