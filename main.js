@@ -4,18 +4,18 @@
    ============================================= */
 
 // ====== Loader ======
-window.addEventListener('load', () => {
+let pageInited = false;
+function revealSite() {
   const loader = document.getElementById('loader');
-  if (loader) {
-    setTimeout(() => {
-      loader.classList.add('hidden');
-      document.body.style.overflow = '';
-      initPage();
-    }, 900);
-  } else {
-    initPage();
-  }
+  if (loader) loader.classList.add('hidden');
+  document.body.style.overflow = '';
+  if (!pageInited) { pageInited = true; initPage(); }
+}
+window.addEventListener('load', () => {
+  setTimeout(revealSite, document.getElementById('loader') ? 900 : 0);
 });
+// Safety net: never trap the page behind the loader if `load` is slow or never fires
+setTimeout(revealSite, 3500);
 if (document.getElementById('loader')) {
   document.body.style.overflow = 'hidden';
 }
@@ -33,13 +33,15 @@ if (navbar) {
 
 if (navToggle && navLinks) {
   navToggle.addEventListener('click', () => {
-    navToggle.classList.toggle('open');
-    navLinks.classList.toggle('open');
+    const open = navLinks.classList.toggle('open');
+    navToggle.classList.toggle('open', open);
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
   navLinks.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => {
       navToggle.classList.remove('open');
       navLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
     });
   });
 }
@@ -70,6 +72,12 @@ window.addEventListener('scroll', highlightNav);
 // All elements with data-reveal will fade in when they enter the viewport
 function setupReveals() {
   const revealElements = document.querySelectorAll('[data-reveal]');
+
+  // Fallback: if IntersectionObserver is unavailable, just show everything
+  if (!('IntersectionObserver' in window)) {
+    revealElements.forEach(el => el.classList.add('revealed'));
+    return;
+  }
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -214,7 +222,10 @@ function initGSAP() {
 // ====== Smooth Scroll ======
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', e => {
-    const target = document.querySelector(link.getAttribute('href'));
+    const href = link.getAttribute('href');
+    // Placeholder/empty anchors (href="#"): don't jump to top and don't run an invalid selector
+    if (!href || href === '#' || href.length < 2) { e.preventDefault(); return; }
+    const target = document.querySelector(href);
     if (target) {
       e.preventDefault();
       const offset = 80;

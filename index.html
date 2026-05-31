@@ -8,11 +8,83 @@
   <meta name="keywords" content="cooking class Marrakech, Moroccan cooking class, riad Marrakech Medina, cooking class Medina, Marrakech experience, tajine class Marrakech">
   <meta property="og:title" content="Art Darmed Event — Cooking Classes & Riad Marrakech">
   <meta property="og:description" content="Authentic Moroccan cooking classes and riad rooms in Derb Zaouia, Marrakech Medina. Small groups, rooftop dining, book via WhatsApp.">
-  <meta property="og:url" content="https://art-darmed-event.vercel.app/">
+  <meta property="og:url" content="https://artdarmedevent.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Art Darmed Event">
+  <meta property="og:image" content="https://artdarmedevent.com/images/heroimage1.jpg">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="fr_FR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Art Darmed Event — Cooking Classes & Riad Marrakech">
+  <meta name="twitter:description" content="Authentic Moroccan cooking classes and riad rooms in the Marrakech Medina. Small groups, rooftop dining, book via WhatsApp.">
+  <meta name="twitter:image" content="https://artdarmedevent.com/images/heroimage1.jpg">
+
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://art-darmed-event.vercel.app/">
+  <link rel="canonical" href="https://artdarmedevent.com/">
+
+  <!-- Fonts: preconnect + non-blocking <link> (moved out of the CSS @import) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Preload the hero (LCP) image -->
+  <link rel="preload" as="image" href="images/heroimage1.jpg" fetchpriority="high">
+
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="images/logo.png">
+
+  <!-- Structured data: LocalBusiness + AggregateRating (4.9★, 80+ Google reviews) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "TouristAttraction"],
+    "@id": "https://artdarmedevent.com/#business",
+    "name": "Art Darmed Event",
+    "description": "Moroccan cooking classes and riad stay in the heart of the Marrakech Medina. Small groups, rooftop dining, real family recipes.",
+    "image": "https://artdarmedevent.com/images/heroimage1.jpg",
+    "url": "https://artdarmedevent.com/",
+    "telephone": "+212654508426",
+    "servesCuisine": "Moroccan",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1 Derb Zaouia, Rte Sidi Abdelaziz",
+      "addressLocality": "Marrakech",
+      "postalCode": "40000",
+      "addressCountry": "MA"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 31.6295, "longitude": -7.9893 },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "09:00",
+      "closes": "22:00"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "80",
+      "bestRating": "5"
+    }
+  }
+  </script>
+
+  <!-- Structured data: FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Where is the cooking class held?", "acceptedAnswer": { "@type": "Answer", "text": "In our riad on Derb Zaouia, in the heart of the Marrakech Medina (near Rte Sidi Abdelaziz). We send you a map pin and meet you at an easy landmark to walk you in." } },
+      { "@type": "Question", "name": "What does the cooking class include?", "acceptedAnswer": { "@type": "Answer", "text": "A guided walk to the souk to choose fresh ingredients, hands-on cooking of a full Moroccan meal — starter, main and dessert — and dining together on our rooftop terrace with mint tea. We're happy to adapt for vegetarian and gluten-free guests." } },
+      { "@type": "Question", "name": "How much does a cooking class cost?", "acceptedAnswer": { "@type": "Answer", "text": "Our Home Made menu is 350 MAD and the festive Ceremonial menu is 700 MAD. Booking and payment are arranged simply over WhatsApp." } },
+      { "@type": "Question", "name": "Do I need to book in advance?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — classes stay small (max 8 guests) and personal, so we recommend booking a day or two ahead on WhatsApp. We usually confirm within 2 hours." } },
+      { "@type": "Question", "name": "Can I also stay overnight in the riad?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We have rooms in our restored riad in the Marrakech Medina from 600 MAD per night, so you can pair a stay with your cooking experience." } }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -30,7 +102,7 @@
 
 <!-- Navigation -->
 <nav class="nav" id="navbar">
-  <a href="#" class="nav-logo" id="navLogo">
+  <a href="#hero" class="nav-logo" id="navLogo">
     <img src="images/logo.png" alt="Art Darmed Event Logo" class="logo-img">
     Art Darmed Event
   </a>
@@ -48,9 +120,9 @@
     <button class="lang-btn active" data-lang="en">EN</button>
     <button class="lang-btn" data-lang="fr">FR</button>
   </div>
-  <div class="nav-toggle" id="navToggle">
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
     <span></span><span></span><span></span>
-  </div>
+  </button>
 </nav>
 
 <!-- ============ HERO SECTION ============ -->
@@ -114,7 +186,7 @@
       <span class="label" data-reveal data-i18n="exp.label">The Experience</span>
       <h2 data-reveal data-i18n="exp.title">A Culinary Journey Through <span class="accent-font">Marrakech</span></h2>
       <p class="lead" data-reveal data-i18n="exp.lead">
-        From the vibrant souks to your plate, every moment of the Dar Med Art cooking class is crafted to ignite your senses and connect you to Moroccan heritage.
+        From the vibrant souks to your plate, every moment of the Art Darmed Event cooking class is crafted to ignite your senses and connect you to Moroccan heritage.
       </p>
     </div>
 
@@ -163,7 +235,7 @@
   <div class="container">
     <div class="section-header">
       <span class="label" data-reveal data-i18n="rooms.label">Stay With Us</span>
-      <h2 data-reveal data-i18n="rooms.title">Three Rooms in the Heart of the <span class="accent-font">Medina</span></h2>
+      <h2 data-reveal data-i18n="rooms.title">Rooms in the Heart of the <span class="accent-font">Medina</span></h2>
       <p class="lead" data-reveal data-i18n="rooms.lead">
         Extend your experience with an overnight stay in our beautifully restored riad. Each room blends traditional Moroccan craftsmanship with modern comfort.
       </p>
@@ -174,7 +246,6 @@
       <a href="room-souk.html" class="room-card" id="roomCard1" data-reveal data-reveal-delay="0">
         <div class="room-card-image">
           <img src="images/room-souk-1.jpg" alt="La Chambre du Souk — cozy double room with traditional carved arch headboard" loading="lazy">
-          <span class="room-price-tag">from 600 MAD/night</span>
         </div>
         <div class="room-card-body">
           <h3 data-i18n="rooms.room1.title">La Chambre du Souk</h3>
@@ -190,29 +261,12 @@
       <a href="room-atlas.html" class="room-card" id="roomCard2" data-reveal data-reveal-delay="0.15">
         <div class="room-card-image">
           <img src="images/room-toit-1.jpg" alt="La Chambre de l'Atlas — room near the rooftop terrace" loading="lazy">
-          <span class="room-price-tag">from 600 MAD/night</span>
         </div>
         <div class="room-card-body">
           <h3 data-i18n="rooms.room2.title">La Chambre de l'Atlas</h3>
           <p data-i18n="rooms.room2.text">Wake up steps from the rooftop terrace. Warm Moroccan textiles and carved plasterwork details.</p>
           <div class="room-card-footer">
             <span class="room-price" data-i18n="rooms.room2.price">from 600 MAD/night</span>
-            <span class="btn btn-view-room" data-i18n="rooms.view">View Room →</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Room 3 -->
-      <a href="room-artisans.html" class="room-card" id="roomCard3" data-reveal data-reveal-delay="0.3">
-        <div class="room-card-image">
-          <img src="images/room-artisans.jpg" alt="La Chambre des Artisans — largest room with salon corner" loading="lazy">
-          <span class="room-price-tag">from 600 MAD/night</span>
-        </div>
-        <div class="room-card-body">
-          <h3 data-i18n="rooms.room3.title">La Chambre des Artisans</h3>
-          <p data-i18n="rooms.room3.text">Our largest room with a traditional salon corner, stained glass window, and hand-woven décor.</p>
-          <div class="room-card-footer">
-            <span class="room-price" data-i18n="rooms.room3.price">from 600 MAD/night</span>
             <span class="btn btn-view-room" data-i18n="rooms.view">View Room →</span>
           </div>
         </div>
@@ -290,108 +344,73 @@
   <div class="container menu-container">
     <div class="section-header">
       <span class="label" data-reveal data-i18n="menu.label">The Menu</span>
-      <h2 data-reveal data-i18n="menu.title">Seasonal <span class="accent-font">Tasting Menu</span></h2>
+      <h2 data-reveal data-i18n="menu.title">Cooking Class <span class="accent-font">Menus</span></h2>
       <p class="lead" data-reveal data-i18n="menu.lead">
-        Each class features a curated selection of dishes that celebrate Morocco's seasonal ingredients and regional traditions.
+        Two set menus to cook together in class — an everyday Home Made menu and a festive Ceremonial menu. Each is a full starter, main and dessert.
       </p>
     </div>
 
-    <div class="menu-grid">
-      <!-- Starters -->
-      <div class="menu-category" id="menuStarters" data-reveal data-reveal-delay="0">
-        <div class="menu-category-header">
-          <span class="menu-cat-number">I</span>
-          <h3 data-i18n="menu.starters">Starters</h3>
-          <div class="menu-divider"></div>
+    <div class="menus-grid">
+
+      <!-- Home Made Menu -->
+      <div class="menu-set" data-reveal data-reveal-delay="0">
+        <div class="menu-set-head">
+          <h3 class="menu-set-name" data-i18n="menu.home.name">Home Made Menu</h3>
+          <span class="menu-set-price">350 MAD</span>
         </div>
-        <div class="menu-items">
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Harira Fassia</span>
-              <span class="menu-item-dots"></span>
-            </div>
-            <p class="menu-item-desc" data-i18n="menu.harira.desc">Traditional tomato-lentil soup with saffron, ginger, and fresh herbs</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Zaalouk</span>
-              <span class="menu-item-dots"></span>
-            </div>
-            <p class="menu-item-desc" data-i18n="menu.zaalouk.desc">Smoky aubergine and tomato salad with cumin, garlic, and olive oil</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Briwat au Fromage</span>
-              <span class="menu-item-dots"></span>
-            </div>
-            <p class="menu-item-desc" data-i18n="menu.briwat.desc">Crispy phyllo triangles filled with herbed goat cheese and honey</p>
-          </div>
+        <div class="menu-set-divider"></div>
+
+        <div class="menu-course">
+          <span class="menu-course-label" data-i18n="menu.starter">Starter</span>
+          <p class="menu-dish" data-i18n="menu.home.starter">A variety of Moroccan cooked vegetables — eggplant, pepper, carrot &amp; courgette</p>
+        </div>
+        <div class="menu-course">
+          <span class="menu-course-label" data-i18n="menu.main">Main dish</span>
+          <p class="menu-dish" data-i18n="menu.home.main1">Chicken tajine with onions, preserved lemons &amp; olives</p>
+          <p class="menu-dish" data-i18n="menu.home.main2">Ground beef tajine with tomatoes &amp; eggs</p>
+        </div>
+        <div class="menu-course">
+          <span class="menu-course-label" data-i18n="menu.dessert">Dessert</span>
+          <p class="menu-dish" data-i18n="menu.home.dessert1">Orange semolina cake</p>
+          <p class="menu-dish" data-i18n="menu.home.dessert2">Caramelised orange slices with cinnamon</p>
         </div>
       </div>
 
-      <!-- Mains -->
-      <div class="menu-category" id="menuMains" data-reveal data-reveal-delay="0.15">
-        <div class="menu-category-header">
-          <span class="menu-cat-number">II</span>
-          <h3 data-i18n="menu.mains">Main Courses</h3>
-          <div class="menu-divider"></div>
+      <!-- Ceremonial Menu -->
+      <div class="menu-set menu-set-featured" data-reveal data-reveal-delay="0.15">
+        <div class="menu-set-head">
+          <h3 class="menu-set-name" data-i18n="menu.cer.name">Ceremonial Menu</h3>
+          <span class="menu-set-price">700 MAD</span>
         </div>
-        <div class="menu-items">
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Tagine d'Agneau</span>
-              <span class="menu-item-dots"></span>
-            </div>
-            <p class="menu-item-desc" data-i18n="menu.tagine.desc">Slow-cooked lamb with caramelised prunes, toasted almonds, and cinnamon</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Couscous Royal</span>
-              <span class="menu-item-dots"></span>
-            </div>
-            <p class="menu-item-desc" data-i18n="menu.couscous.desc">Hand-rolled semolina with seven-vegetable broth and merguez</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Pastilla au Poulet</span>
-              <span class="menu-item-dots"></span>
-            </div>
-            <p class="menu-item-desc" data-i18n="menu.pastilla.desc">Flaky pastry pie with spiced chicken, toasted almonds, and dusted sugar</p>
-          </div>
+        <div class="menu-set-divider"></div>
+
+        <div class="menu-course">
+          <span class="menu-course-label" data-i18n="menu.starter">Starter</span>
+          <p class="menu-dish" data-i18n="menu.cer.starter">Crispy stuffed briwat — kefta, chicken, spinach &amp; cheese</p>
+        </div>
+        <div class="menu-course">
+          <span class="menu-course-label" data-i18n="menu.main">Main dish</span>
+          <p class="menu-dish" data-i18n="menu.cer.main1">Meat tajine with prunes, apricots &amp; nuts</p>
+          <p class="menu-dish" data-i18n="menu.cer.main2">Chicken pastilla</p>
+          <p class="menu-dish" data-i18n="menu.cer.main3">Chicken with olives</p>
+        </div>
+        <div class="menu-course">
+          <span class="menu-course-label" data-i18n="menu.dessert">Dessert</span>
+          <p class="menu-dish" data-i18n="menu.cer.dessert1">M'hancha</p>
+          <p class="menu-dish" data-i18n="menu.cer.dessert2">Jawhara</p>
         </div>
       </div>
 
-      <!-- Desserts -->
-      <div class="menu-category" id="menuDesserts" data-reveal data-reveal-delay="0.3">
-        <div class="menu-category-header">
-          <span class="menu-cat-number">III</span>
-          <h3 data-i18n="menu.desserts">Desserts & Tea</h3>
-          <div class="menu-divider"></div>
-        </div>
-        <div class="menu-items">
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Cornes de Gazelle</span>
-              <span class="menu-item-dots"></span>
-            </div>
-            <p class="menu-item-desc" data-i18n="menu.cornes.desc">Crescent-shaped almond paste pastries scented with orange blossom</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Chebakia au Miel</span>
-              <span class="menu-item-dots"></span>
-            </div>
-            <p class="menu-item-desc" data-i18n="menu.chebakia.desc">Flower-shaped sesame cookies glazed in warm honey and rosewater</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Thé à la Menthe</span>
-              <span class="menu-item-dots"></span>
-            </div>
-            <p class="menu-item-desc" data-i18n="menu.tea.desc">Ceremonial Moroccan mint tea poured from height — the taste of hospitality</p>
-          </div>
-        </div>
-      </div>
+    </div>
+
+    <!-- Custom dish request -->
+    <div class="menu-custom" data-reveal>
+      <h3 class="menu-custom-title" data-i18n="menu.custom.title">Have a dish in mind?</h3>
+      <p class="menu-custom-text" data-i18n="menu.custom.text">Is there a Moroccan dish you've always wanted to master? Just tell us on WhatsApp and we'll build your class around it.</p>
+      <a href="https://wa.me/212654508426?text=Hello%20Art%20Darmed%20Event%21%20I%27d%20love%20to%20learn%20how%20to%20cook%20a%20specific%20Moroccan%20dish%20in%20your%20cooking%20class%3A%20" class="btn btn-saffron" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="flex-shrink:0" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span data-i18n="menu.custom.btn">Ask us on WhatsApp</span>
+      </a>
     </div>
   </div>
 </section>
@@ -509,11 +528,43 @@
   </div>
 </section>
 
+<!-- ============ FAQ ============ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="label" data-reveal data-i18n="faq.label">Good to Know</span>
+      <h2 data-reveal data-i18n="faq.title">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" data-reveal>
+        <summary data-i18n="faq.q1">Where is the cooking class held?</summary>
+        <p data-i18n="faq.a1">In our riad on Derb Zaouia, in the heart of the Marrakech Medina (near Rte Sidi Abdelaziz). We send you a map pin and meet you at an easy landmark to walk you in.</p>
+      </details>
+      <details class="faq-item" data-reveal>
+        <summary data-i18n="faq.q2">What does the cooking class include?</summary>
+        <p data-i18n="faq.a2">A guided walk to the souk to choose fresh ingredients, hands-on cooking of a full Moroccan meal — starter, main and dessert — and dining together on our rooftop terrace with mint tea. We're happy to adapt for vegetarian and gluten-free guests.</p>
+      </details>
+      <details class="faq-item" data-reveal>
+        <summary data-i18n="faq.q3">How much does a cooking class cost?</summary>
+        <p data-i18n="faq.a3">Our Home Made menu is 350 MAD and the festive Ceremonial menu is 700 MAD. Booking and payment are arranged simply over WhatsApp.</p>
+      </details>
+      <details class="faq-item" data-reveal>
+        <summary data-i18n="faq.q4">Do I need to book in advance?</summary>
+        <p data-i18n="faq.a4">Yes — classes stay small (max 8 guests) and personal, so we recommend booking a day or two ahead on WhatsApp. We usually confirm within 2 hours.</p>
+      </details>
+      <details class="faq-item" data-reveal>
+        <summary data-i18n="faq.q5">Can I also stay overnight in the riad?</summary>
+        <p data-i18n="faq.a5">Yes. We have rooms in our restored riad in the Marrakech Medina from 600 MAD per night, so you can pair a stay with your cooking experience.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- ============ RESERVATION SIMULATOR ============ -->
 <section class="reservation-section" id="reservation">
   <div class="container">
     <div class="section-header">
-      <span class="label" data-reveal>BOOKING</span>
+      <span class="label" data-reveal data-i18n="res.booking">BOOKING</span>
       <h2 data-reveal data-i18n="res.title">Book Your Experience</h2>
       <p class="lead" data-reveal data-i18n="res.subtitle">Choose your date, time and experience — we'll confirm within 2 hours</p>
     </div>
@@ -528,13 +579,12 @@
             <option value="Dinner on the Rooftop" data-i18n="res.opt.dinner">Dinner on the Rooftop</option>
             <option value="Room — La Chambre du Souk" data-i18n="res.opt.souk">Room — La Chambre du Souk</option>
             <option value="Room — La Chambre de l'Atlas" data-i18n="res.opt.toit">Room — La Chambre de l'Atlas</option>
-            <option value="Room — La Chambre des Artisans" data-i18n="res.opt.artisans">Room — La Chambre des Artisans</option>
           </select>
         </div>
 
         <div class="form-group">
           <label for="resGuests" data-i18n="res.label.guests">Number of Guests</label>
-          <input type="number" id="resGuests" min="1" max="12" required placeholder="1-12">
+          <input type="number" id="resGuests" min="1" max="8" required placeholder="1-8" data-i18n-placeholder="res.placeholder.guests">
         </div>
 
         <div class="form-group">
@@ -554,12 +604,12 @@
 
         <div class="form-group form-group-full">
           <label for="resName" data-i18n="res.label.name">Your Name</label>
-          <input type="text" id="resName" required placeholder="Your full name">
+          <input type="text" id="resName" required placeholder="Your full name" data-i18n-placeholder="res.placeholder.name">
         </div>
 
         <div class="form-group form-group-full">
           <label for="resRequests" data-i18n="res.label.requests">Special Requests (Optional)</label>
-          <textarea id="resRequests" placeholder="Allergies, dietary requirements, or other requests..."></textarea>
+          <textarea id="resRequests" placeholder="Allergies, dietary requirements, or other requests..." data-i18n-placeholder="res.placeholder.requests"></textarea>
         </div>
 
         <div class="reservation-error" id="resError"></div>
@@ -591,7 +641,7 @@
         <span class="label" data-reveal data-i18n="about.label">Our Story</span>
         <h2 data-reveal data-i18n="about.title">Welcome to <span class="accent-font">Art Darmed Event</span></h2>
         <p data-reveal data-i18n="about.p1">
-          In the heart of the ancient Medina, behind a hand-carved cedarwood door, lies Dar Med Art — a traditional riad that has been our family home for generations. Every tile, every arch, every courtyard fountain carries the memory of countless meals shared and stories told.
+          In the heart of the ancient Medina, behind a hand-carved cedarwood door, lies Art Darmed Event — a traditional riad that has been our family home for generations. Every tile, every arch, every courtyard fountain carries the memory of countless meals shared and stories told.
         </p>
         <p data-reveal data-i18n="about.p2">
           We opened our kitchen to the world because we believe food is the most honest expression of culture. When you cook with us, you're not just learning recipes — you're becoming part of a living tradition that stretches back centuries.
@@ -641,7 +691,7 @@
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          title="Dar Med Art Event location on Google Maps">
+          title="Art Darmed Event location on Google Maps">
         </iframe>
       </div>
       <a href="https://maps.app.goo.gl/nyxLG1bn8k43TA537" class="about-map-link" target="_blank" rel="noopener" id="mapDirectLink">
@@ -654,7 +704,7 @@
 </section>
 
 <!-- ============ CTA BANNER ============ -->
-<section class="section" id="reservation">
+<section class="section" id="cta">
   <div class="container">
     <div class="cta-banner" id="ctaBanner" data-reveal>
       <div class="cta-pattern"></div>
@@ -677,7 +727,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="#" class="nav-logo">
+        <a href="#hero" class="nav-logo">
           <img src="images/logo.png" alt="Art Darmed Event Logo" class="logo-img">
           Art Darmed Event
         </a>
@@ -704,18 +754,14 @@
       <div class="footer-social-col">
         <h4 data-i18n="footer.follow">Follow Us</h4>
         <div class="footer-socials">
-          <a href="#" class="footer-social" aria-label="Instagram">𝕀𝔾</a>
-          <a href="#" class="footer-social" aria-label="Facebook">𝔽𝔹</a>
-          <a href="#" class="footer-social" aria-label="TripAdvisor">𝕋𝔸</a>
+          <a href="https://www.instagram.com/art_darmed_event/" class="footer-social" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.43.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.43.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.43-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.43-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 1.62c-3.15 0-3.5.01-4.74.07-.9.04-1.39.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.32-.28.81-.32 1.71-.06 1.24-.07 1.59-.07 4.74s.01 3.5.07 4.74c.04.9.19 1.39.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.13.81.28 1.71.32 1.24.06 1.59.07 4.74.07s3.5-.01 4.74-.07c.9-.04 1.39-.19 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.32.28-.81.32-1.71.06-1.24.07-1.59.07-4.74s-.01-3.5-.07-4.74c-.04-.9-.19-1.39-.32-1.71a2.85 2.85 0 0 0-.69-1.06 2.85 2.85 0 0 0-1.06-.69c-.32-.13-.81-.28-1.71-.32-1.24-.06-1.59-.07-4.74-.07zm0 2.76a5.46 5.46 0 1 1 0 10.92 5.46 5.46 0 0 1 0-10.92zm0 1.62a3.84 3.84 0 1 0 0 7.68 3.84 3.84 0 0 0 0-7.68zm5.65-2.9a1.28 1.28 0 1 1 0 2.56 1.28 1.28 0 0 1 0-2.56z"/></svg>
+          </a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span data-i18n="footer.copy">© 2026 Dar Med Art Event. All rights reserved.</span>
-      <div class="footer-bottom-links">
-        <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-        <a href="#" data-i18n="footer.terms">Terms of Service</a>
-      </div>
+      <span data-i18n="footer.copy">© 2026 Art Darmed Event. All rights reserved.</span>
     </div>
   </div>
 </footer>
@@ -765,11 +811,11 @@ function handleBookingSubmit() {
   }
 
   const guestsNum = parseInt(guestsVal, 10);
-  if (isNaN(guestsNum) || guestsNum < 1 || guestsNum > 12) {
+  if (isNaN(guestsNum) || guestsNum < 1 || guestsNum > 8) {
     const lang = localStorage.getItem('darmedart-lang') || 'en';
     errorEl.textContent = lang === 'fr'
-      ? 'Le nombre d\'invités doit être compris entre 1 et 12.'
-      : 'Number of guests must be between 1 and 12.';
+      ? 'Le nombre d\'invités doit être compris entre 1 et 8.'
+      : 'Number of guests must be between 1 and 8.';
     errorEl.style.display = 'block';
     return;
   }
@@ -789,7 +835,7 @@ function handleBookingSubmit() {
   const specialRequests = requestsVal ? requestsVal : 'None';
 
   // Construct message
-  const message = `Hello! I would like to make a booking at Dar Med Art Event.
+  const message = `Hello! I would like to make a booking at Art Darmed Event.
 
 Experience: ${expVal}
 Date: ${formattedDate}

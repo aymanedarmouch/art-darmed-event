@@ -1,0 +1,9 @@
+# Local-only source photos & dev scripts — kept on your disk, NOT deployed
+/photos/
+/room 02/
+/room du souk/
+/scratch/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db

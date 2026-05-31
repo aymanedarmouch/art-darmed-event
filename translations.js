@@ -56,20 +56,34 @@ const translations = {
 
   // ──── MENU ────
   'menu.label': { en: 'The Menu', fr: 'Le Menu' },
-  'menu.title': { en: 'Seasonal <span class="accent-font">Tasting Menu</span>', fr: 'Menu Dégustation <span class="accent-font">de Saison</span>' },
-  'menu.lead': { en: 'Each class features a curated selection of dishes that celebrate Morocco\'s seasonal ingredients and regional traditions.', fr: 'Chaque cours présente une sélection de plats qui célèbrent les ingrédients de saison et les traditions régionales du Maroc.' },
-  'menu.starters': { en: 'Starters', fr: 'Entrées' },
-  'menu.mains': { en: 'Main Courses', fr: 'Plats Principaux' },
-  'menu.desserts': { en: 'Desserts & Tea', fr: 'Desserts & Thé' },
-  'menu.harira.desc': { en: 'Traditional tomato-lentil soup with saffron, ginger, and fresh herbs', fr: 'Soupe traditionnelle tomate-lentilles au safran, gingembre et herbes fraîches' },
-  'menu.zaalouk.desc': { en: 'Smoky aubergine and tomato salad with cumin, garlic, and olive oil', fr: 'Salade fumée d\'aubergine et tomate au cumin, ail et huile d\'olive' },
-  'menu.briwat.desc': { en: 'Crispy phyllo triangles filled with herbed goat cheese and honey', fr: 'Triangles croustillants de phyllo farcis au fromage de chèvre aux herbes et miel' },
-  'menu.tagine.desc': { en: 'Slow-cooked lamb with caramelised prunes, toasted almonds, and cinnamon', fr: 'Agneau mijoté aux pruneaux caramélisés, amandes grillées et cannelle' },
-  'menu.couscous.desc': { en: 'Hand-rolled semolina with seven-vegetable broth and merguez', fr: 'Semoule roulée à la main avec bouillon de sept légumes et merguez' },
-  'menu.pastilla.desc': { en: 'Flaky pastry pie with spiced chicken, toasted almonds, and dusted sugar', fr: 'Tourte feuilletée au poulet épicé, amandes grillées et sucre glace' },
-  'menu.cornes.desc': { en: 'Crescent-shaped almond paste pastries scented with orange blossom', fr: 'Pâtisseries en forme de croissant à la pâte d\'amande parfumées à la fleur d\'oranger' },
-  'menu.chebakia.desc': { en: 'Flower-shaped sesame cookies glazed in warm honey and rosewater', fr: 'Biscuits au sésame en forme de fleur glacés au miel chaud et à l\'eau de rose' },
-  'menu.tea.desc': { en: 'Ceremonial Moroccan mint tea poured from height — the taste of hospitality', fr: 'Thé à la menthe marocain cérémonial versé de haut — le goût de l\'hospitalité' },
+  'menu.title': { en: 'Cooking Class <span class="accent-font">Menus</span>', fr: 'Nos Menus de <span class="accent-font">Cours</span>' },
+  'menu.lead': { en: 'Two set menus to cook together in class — an everyday Home Made menu and a festive Ceremonial menu. Each is a full starter, main and dessert.', fr: 'Deux menus à cuisiner ensemble en cours — un menu Fait Maison du quotidien et un menu Cérémonial festif. Chacun comprend une entrée, un plat et un dessert.' },
+
+  'menu.starter': { en: 'Starter', fr: 'Entrée' },
+  'menu.main': { en: 'Main dish', fr: 'Plat principal' },
+  'menu.dessert': { en: 'Dessert', fr: 'Dessert' },
+
+  // Home Made Menu (350 MAD)
+  'menu.home.name': { en: 'Home Made Menu', fr: 'Menu Fait Maison' },
+  'menu.home.starter': { en: 'A variety of Moroccan cooked vegetables — eggplant, pepper, carrot & courgette', fr: 'Assortiment de légumes marocains cuits — aubergine, poivron, carotte & courgette' },
+  'menu.home.main1': { en: 'Chicken tajine with onions, preserved lemons & olives', fr: 'Tajine de poulet aux oignons, citrons confits & olives' },
+  'menu.home.main2': { en: 'Ground beef tajine with tomatoes & eggs', fr: 'Tajine de viande hachée aux tomates & œufs' },
+  'menu.home.dessert1': { en: 'Orange semolina cake', fr: 'Gâteau de semoule à l\'orange' },
+  'menu.home.dessert2': { en: 'Caramelised orange slices with cinnamon', fr: 'Tranches d\'orange caramélisées à la cannelle' },
+
+  // Ceremonial Menu (700 MAD)
+  'menu.cer.name': { en: 'Ceremonial Menu', fr: 'Menu Cérémonial' },
+  'menu.cer.starter': { en: 'Crispy stuffed briwat — kefta, chicken, spinach & cheese', fr: 'Briwat croustillants farcis — kefta, poulet, épinards & fromage' },
+  'menu.cer.main1': { en: 'Meat tajine with prunes, apricots & nuts', fr: 'Tajine de viande aux pruneaux, abricots & noix' },
+  'menu.cer.main2': { en: 'Chicken pastilla', fr: 'Pastilla au poulet' },
+  'menu.cer.main3': { en: 'Chicken with olives', fr: 'Poulet aux olives' },
+  'menu.cer.dessert1': { en: 'M\'hancha', fr: 'M\'hancha' },
+  'menu.cer.dessert2': { en: 'Jawhara', fr: 'Jawhara' },
+
+  // Custom dish request CTA
+  'menu.custom.title': { en: 'Have a dish in mind?', fr: 'Un plat en tête ?' },
+  'menu.custom.text': { en: 'Is there a Moroccan dish you\'ve always wanted to master? Just tell us on WhatsApp and we\'ll build your class around it.', fr: 'Y a-t-il un plat marocain que vous avez toujours voulu maîtriser ? Dites-le-nous sur WhatsApp et nous construirons le cours autour de ce plat.' },
+  'menu.custom.btn': { en: 'Ask us on WhatsApp', fr: 'Demandez-nous sur WhatsApp' },
 
   // ──── BLOG ────
   // ──── BLOG ────
@@ -106,7 +120,7 @@ const translations = {
 
   // ──── ROOMS ────
   'rooms.label': { en: 'Stay With Us', fr: 'Séjournez Chez Nous' },
-  'rooms.title': { en: 'Three Rooms in the Heart of the <span class="accent-font">Medina</span>', fr: 'Trois Chambres au Cœur de la <span class="accent-font">Médina</span>' },
+  'rooms.title': { en: 'Rooms in the Heart of the <span class="accent-font">Medina</span>', fr: 'Chambres au Cœur de la <span class="accent-font">Médina</span>' },
   'rooms.lead': { en: 'Extend your experience with an overnight stay in our beautifully restored riad. Each room blends traditional Moroccan craftsmanship with modern comfort.', fr: 'Prolongez votre expérience avec une nuit dans notre riad magnifiquement restauré. Chaque chambre allie l\'artisanat marocain traditionnel et le confort moderne.' },
   'rooms.room1.title': { en: 'La Chambre du Souk', fr: 'La Chambre du Souk' },
   'rooms.room1.text': { en: 'A cozy double room with traditional carved arch headboard, Berber blankets, and a private sitting area.', fr: 'Une chambre double confortable avec tête de lit en arche sculptée traditionnelle, couvertures berbères et coin salon privé.' },
@@ -137,6 +151,9 @@ const translations = {
   'res.label.name': { en: 'Your Name', fr: 'Votre Nom' },
   'res.label.requests': { en: 'Special Requests (Optional)', fr: 'Demandes Spéciales (Optionnel)' },
   'res.placeholder.requests': { en: 'Allergies, dietary requirements, or other requests...', fr: 'Allergies, exigences alimentaires ou autres demandes...' },
+  'res.placeholder.name': { en: 'Your full name', fr: 'Votre nom complet' },
+  'res.placeholder.guests': { en: '1-8', fr: '1-8' },
+  'res.booking': { en: 'BOOKING', fr: 'RÉSERVATION' },
   'res.btn': { en: 'Book via WhatsApp', fr: 'Réserver via WhatsApp' },
   'res.note': { en: '⚡ We typically confirm within 2 hours via WhatsApp', fr: '⚡ Nous confirmons généralement sous 2 heures via WhatsApp' },
 
@@ -152,8 +169,20 @@ const translations = {
   'footer.contact': { en: 'Contact', fr: 'Contact' },
   'footer.follow': { en: 'Follow Us', fr: 'Suivez-nous' },
   'footer.copy': { en: '© 2026 Art Darmed Event. All rights reserved.', fr: '© 2026 Art Darmed Event. Tous droits réservés.' },
-  'footer.privacy': { en: 'Privacy Policy', fr: 'Politique de Confidentialité' },
-  'footer.terms': { en: 'Terms of Service', fr: 'Conditions d\'Utilisation' },
+
+  // ──── FAQ ────
+  'faq.label': { en: 'Good to Know', fr: 'Bon à Savoir' },
+  'faq.title': { en: 'Frequently Asked Questions', fr: 'Questions Fréquentes' },
+  'faq.q1': { en: 'Where is the cooking class held?', fr: 'Où se déroule le cours de cuisine ?' },
+  'faq.a1': { en: 'In our riad on Derb Zaouia, in the heart of the Marrakech Medina (near Rte Sidi Abdelaziz). We send you a map pin and meet you at an easy landmark to walk you in.', fr: 'Dans notre riad sur le Derb Zaouia, au cœur de la Médina de Marrakech (près de la Rte Sidi Abdelaziz). Nous vous envoyons un point sur la carte et vous accueillons à un repère facile pour vous guider.' },
+  'faq.q2': { en: 'What does the cooking class include?', fr: 'Que comprend le cours de cuisine ?' },
+  'faq.a2': { en: 'A guided walk to the souk to choose fresh ingredients, hands-on cooking of a full Moroccan meal — starter, main and dessert — and dining together on our rooftop terrace with mint tea. We\'re happy to adapt for vegetarian and gluten-free guests.', fr: 'Une visite guidée du souk pour choisir les ingrédients frais, la préparation d\'un repas marocain complet — entrée, plat et dessert — et un repas partagé sur notre terrasse avec du thé à la menthe. Nous nous adaptons volontiers aux régimes végétariens et sans gluten.' },
+  'faq.q3': { en: 'How much does a cooking class cost?', fr: 'Combien coûte un cours de cuisine ?' },
+  'faq.a3': { en: 'Our Home Made menu is 350 MAD and the festive Ceremonial menu is 700 MAD. Booking and payment are arranged simply over WhatsApp.', fr: 'Notre menu Fait Maison est à 350 MAD et le menu Cérémonial festif à 700 MAD. La réservation et le paiement se font simplement via WhatsApp.' },
+  'faq.q4': { en: 'Do I need to book in advance?', fr: 'Faut-il réserver à l\'avance ?' },
+  'faq.a4': { en: 'Yes — classes stay small (max 8 guests) and personal, so we recommend booking a day or two ahead on WhatsApp. We usually confirm within 2 hours.', fr: 'Oui — les cours restent petits (8 personnes maximum) et personnels, nous recommandons donc de réserver un ou deux jours à l\'avance sur WhatsApp. Nous confirmons généralement sous 2 heures.' },
+  'faq.q5': { en: 'Can I also stay overnight in the riad?', fr: 'Puis-je aussi passer la nuit dans le riad ?' },
+  'faq.a5': { en: 'Yes. We have rooms in our restored riad in the Marrakech Medina from 600 MAD per night, so you can pair a stay with your cooking experience.', fr: 'Oui. Nous avons des chambres dans notre riad restauré de la Médina à partir de 600 MAD la nuit, pour associer un séjour à votre expérience culinaire.' },
 
   // ──── BLOG PAGES (shared) ────
   'blog.back': { en: '← Back to The Journal', fr: '← Retour au Journal' },
@@ -251,6 +280,13 @@ function applyTranslations(lang) {
     } else {
       el.textContent = text;
     }
+  });
+
+  // Translate input/textarea placeholders
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    const t = translations[key];
+    if (t) el.setAttribute('placeholder', t[lang] || t['en']);
   });
 }
 

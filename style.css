@@ -3,8 +3,9 @@
    Moroccan Cooking Classes · Marrakech Medina
    ============================================= */
 
-/* ---------- Google Fonts ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Outfit:wght@300;400;500;600;700&display=swap');
+/* ---------- Google Fonts ----------
+   Loaded via <link rel="preconnect"> + <link rel="stylesheet"> in index.html <head>
+   (a render-blocking CSS @import was removed here for faster first paint). */
 
 /* ---------- CSS Custom Properties ---------- */
 :root {
@@ -420,7 +421,7 @@ h4 { font-size:1.15rem; font-family:var(--font-body); font-weight:600 }
   line-height:1;
 }
 .hero-stat-label {
-  font-size: .82rem; color:rgba(255,255,255,.5);
+  font-size: .82rem; color:rgba(255,255,255,.65);
   margin-top: .3rem; letter-spacing:.03em;
 }
 
@@ -585,8 +586,10 @@ h4 { font-size:1.15rem; font-family:var(--font-body); font-weight:600 }
 /* ---------- Rooms Section ---------- */
 .rooms-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-lg);
+  max-width: 840px;
+  margin: 0 auto;
 }
 .room-card {
   border-radius: var(--radius-lg);
@@ -719,64 +722,94 @@ h4 { font-size:1.15rem; font-family:var(--font-body); font-weight:600 }
 .menu-container { position:relative; z-index:1 }
 .section-menu .label { color:var(--saffron) }
 .section-menu h2 { color:var(--white) }
-.section-menu .lead { color:rgba(255,255,255,.6) }
+.section-menu .lead { color:rgba(255,255,255,.72) }
 .section-menu .accent-font { color:var(--saffron) }
 
-.menu-grid {
+/* ---------- Menu sets (two cooking-class menus) ---------- */
+.menus-grid {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: var(--space-xl);
-}
-.menu-category-header {
-  text-align: center;
-  margin-bottom: var(--space-lg);
-}
-.menu-cat-number {
-  display: block;
-  font-family: var(--font-display);
-  font-size: 1rem; font-weight:400;
-  color: var(--saffron);
-  letter-spacing: .15em;
-  margin-bottom: var(--space-xs);
-}
-.menu-category-header h3 {
-  color: var(--white);
-  font-size: 1.5rem;
-  margin-bottom: var(--space-sm);
-}
-.menu-divider {
-  width: 50px; height:2px;
-  background: linear-gradient(to right, var(--saffron), transparent);
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+  max-width: 1000px;
   margin: 0 auto;
 }
-
-.menu-item {
-  padding: var(--space-sm) 0;
-  border-bottom: 1px solid rgba(255,255,255,.06);
+.menu-set {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg) var(--space-lg) var(--space-xl);
 }
-.menu-item:last-child { border-bottom:none }
-.menu-item-header {
-  display: flex; align-items:baseline; gap:.5rem;
-  margin-bottom: .3rem;
+.menu-set-featured {
+  border-color: rgba(233,161,6,.4);
+  box-shadow: 0 0 50px rgba(233,161,6,.08);
 }
-.menu-item-name {
+.menu-set-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: var(--space-sm);
+}
+.menu-set-name {
   font-family: var(--font-display);
-  font-size: 1.1rem; font-weight:500;
   color: var(--white);
+  font-size: 1.6rem;
+}
+.menu-set-price {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--saffron);
+  font-size: 1.35rem;
   white-space: nowrap;
 }
-.menu-item-dots {
-  flex:1;
-  border-bottom: 1px dotted rgba(255,255,255,.2);
-  margin-bottom: .3rem;
+.menu-set-divider {
+  height: 1px;
+  background: linear-gradient(to right, rgba(233,161,6,.55), transparent);
+  margin: var(--space-sm) 0 var(--space-lg);
 }
-.menu-item-desc {
-  font-size: .82rem; color:rgba(255,255,255,.45);
-  line-height: 1.6;
-  font-style: italic;
+.menu-course { margin-bottom: var(--space-md); }
+.menu-course:last-child { margin-bottom: 0; }
+.menu-course-label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: .72rem; font-weight: 700;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: var(--saffron);
+  margin-bottom: .5rem;
+}
+.menu-dish {
+  color: rgba(255,255,255,.85);
+  font-size: .98rem;
+  line-height: 1.5;
+  padding: .35rem 0;
+}
+.menu-dish + .menu-dish {
+  border-top: 1px solid rgba(255,255,255,.07);
 }
 
-@media(max-width:900px) { .menu-grid { grid-template-columns:1fr; max-width:520px; margin:0 auto } }
+/* Custom dish request CTA */
+.menu-custom {
+  max-width: 640px;
+  margin: var(--space-xl) auto 0;
+  text-align: center;
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  background: rgba(0,85,164,.14);
+  border: 1px solid rgba(255,255,255,.08);
+}
+.menu-custom-title {
+  font-family: var(--font-display);
+  color: var(--white);
+  font-size: 1.4rem;
+  margin-bottom: var(--space-sm);
+}
+.menu-custom-text {
+  color: rgba(255,255,255,.72);
+  font-size: .95rem;
+  line-height: 1.7;
+  margin-bottom: var(--space-md);
+}
+
+@media(max-width:768px) {
+  .menus-grid { grid-template-columns: 1fr; max-width: 520px; }
+}
 
 /* ---------- About Section ---------- */
 .about-grid {
@@ -1483,6 +1516,62 @@ a.room-card:hover .btn-view-room {
     grid-template-columns: 1fr;
     gap: var(--space-md);
   }
+}
+
+/* =============================================
+   FAQ SECTION
+   ============================================= */
+.faq-list { max-width: 760px; margin: 0 auto; }
+.faq-item {
+  background: var(--white);
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-sm);
+  padding: 0 var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--duration-fast) var(--ease-out);
+}
+.faq-item[open] { box-shadow: var(--shadow-md); }
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: var(--space-md) 0;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.6rem; line-height: 1;
+  color: var(--majorelle);
+  flex-shrink: 0;
+}
+.faq-item[open] summary::after { content: '\2212'; }
+.faq-item p {
+  padding: 0 0 var(--space-md);
+  margin: 0;
+  color: var(--charcoal-light);
+  line-height: 1.75;
+  font-size: .95rem;
+}
+
+/* =============================================
+   REDUCED MOTION — respect user OS preference
+   Disables parallax, tilt, magnetic buttons, counters,
+   floating shapes, and scroll reveals.
+   ============================================= */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
+  .hero-bg { transform: scale(1.1) !important; }
 }
 
 

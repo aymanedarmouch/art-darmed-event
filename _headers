@@ -1,0 +1,4 @@
+# Cloudflare Pages headers
+# Long-cache static images; HTML/CSS/JS keep Cloudflare defaults so edits show up immediately.
+/images/*
+  Cache-Control: public, max-age=2592000
